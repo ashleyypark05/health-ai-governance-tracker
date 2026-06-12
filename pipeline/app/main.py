@@ -28,12 +28,17 @@ DB_PATH = os.path.join(os.path.dirname(__file__), "..", "..", "helpers", "data",
 LINK_REPORT_PATH = os.path.join(os.path.dirname(__file__), "..", "..", "helpers", "data", "link_check_report.json")
 
 @st.cache_data(ttl=300)
-def load_broken_links():
-    """id -> archive.org snapshot URL (or None) for source_urls that are currently 404/broken."""
+def load_link_issues():
+    """id -> {"kind": "broken"|"blocked", "archive_url": str|None} for source_urls
+    that currently return an error (404/etc) or block scripted requests (403)."""
     try:
         with open(LINK_REPORT_PATH) as f:
             report = json.load(f)
-        return {b["id"]: b.get("archive_url") for b in report.get("broken", [])}
+        issues = {b["id"]: {"kind": "broken", "archive_url": b.get("archive_url")}
+                  for b in report.get("broken", [])}
+        issues.update({b["id"]: {"kind": "blocked", "archive_url": b.get("archive_url")}
+                        for b in report.get("blocked", [])})
+        return issues
     except (FileNotFoundError, json.JSONDecodeError):
         return {}
 
@@ -66,7 +71,7 @@ SOURCES = ["FDA Digital Health","FDA AI/ML Medical Devices","CMS Newsroom","ONC 
            "California Legislature","Colorado Legislature","Manatt Health","AHA News","NIST AI RMF","STAT News"]
 
 df = load_data()
-BROKEN = load_broken_links()
+LINK_ISSUES = load_link_issues()
 N  = len(df) if not df.empty else 31
 EN = int(len(df[df["action_tag"]=="new_law"])) if not df.empty else 6
 
@@ -81,12 +86,20 @@ def card(row):
     a  = row.get("action_tag") or ""
     u  = row.get("source_url") or ""
     ac = "tag-law" if a=="new_law" else "tag-act"
-    if row.get("id") in BROKEN:
-        archive_url = BROKEN[row["id"]]
-        if archive_url:
-            lh = f'<a class="sl" href="{archive_url}" target="_blank">View archived source →</a>'
-        else:
-            lh = '<span class="sl sl-na">Source unavailable — summary preserved above</span>'
+    if row.get("id") in LINK_ISSUES:
+        issue = LINK_ISSUES[row["id"]]
+        archive_url = issue["archive_url"]
+        if issue["kind"] == "broken":
+            if archive_url:
+                lh = f'<a class="sl" href="{archive_url}" target="_blank">View archived source →</a>'
+            else:
+                lh = '<span class="sl sl-na">Source unavailable — summary preserved above</span>'
+        else:  # blocked: site rejects scripted requests but the link works in a browser
+            lh = f'<a class="sl" href="{u}" target="_blank">View source →</a>' if u else ""
+            if archive_url:
+                lh += f' <a class="sl" href="{archive_url}" target="_blank">Archived copy →</a>'
+            else:
+                lh += ' <span class="sl sl-na">(opens in browser; blocked for bots)</span>'
     else:
         lh = f'<a class="sl" href="{u}" target="_blank">View source →</a>' if u else ""
     ah = rdot(row.get("relevance_amc"))
@@ -855,12 +868,20 @@ button[kind="primary"],button[kind="primaryFormSubmit"]{color:var(--navy)!import
                 ch = ""
                 for _,row in grp.head(3).iterrows():
                     u = row.get("source_url","")
-                    if row.get("id") in BROKEN:
-                        archive_url = BROKEN[row["id"]]
-                        if archive_url:
-                            lk = f'<a class="ddcl" href="{archive_url}" target="_blank">View archived source →</a>'
-                        else:
-                            lk = '<span class="ddcl sl-na">Source unavailable — summary above</span>'
+                    if row.get("id") in LINK_ISSUES:
+                        issue = LINK_ISSUES[row["id"]]
+                        archive_url = issue["archive_url"]
+                        if issue["kind"] == "broken":
+                            if archive_url:
+                                lk = f'<a class="ddcl" href="{archive_url}" target="_blank">View archived source →</a>'
+                            else:
+                                lk = '<span class="ddcl sl-na">Source unavailable — summary above</span>'
+                        else:  # blocked: site rejects scripted requests but the link works in a browser
+                            lk = f'<a class="ddcl" href="{u}" target="_blank">View source →</a>' if u else ""
+                            if archive_url:
+                                lk += f' <a class="ddcl" href="{archive_url}" target="_blank">Archived copy →</a>'
+                            else:
+                                lk += ' <span class="ddcl sl-na">(opens in browser; blocked for bots)</span>'
                     else:
                         lk = f'<a class="ddcl" href="{u}" target="_blank">View source →</a>' if u else ""
                     ch += f'<div class="ddc"><div class="ddct">{row["title"]}</div><div class="ddcs">{row["summary"]}</div>{lk}</div>'

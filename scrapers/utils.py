@@ -98,9 +98,11 @@ def check_existing_urls(timeout=15, report_path=LINK_REPORT_PATH):
       up forwarding) can't be auto-resolved — there's no hint of where the
       content moved to, so it's written to report_path for manual review
       instead.
-    - URLs on BOT_BLOCKED_DOMAINS that return 403 are treated as "blocked,
-      probably fine" rather than broken, since those sites reject scripted
-      requests but work in a browser.
+    - URLs on BOT_BLOCKED_DOMAINS that return 403 are recorded separately
+      as "blocked" (the site rejects scripted requests but the link itself
+      may still be fine in a browser). Like broken links, a Wayback
+      snapshot is looked up for these so the frontend can offer an
+      archived copy alongside the original link.
 
     Returns (updated_count, broken_list).
     """
@@ -123,7 +125,7 @@ def check_existing_urls(timeout=15, report_path=LINK_REPORT_PATH):
             continue
 
         if r.status_code == 403 and any(d in url for d in BOT_BLOCKED_DOMAINS):
-            blocked.append((dev_id, url))
+            blocked.append((dev_id, url, wayback_snapshot(url)))
             continue
 
         if r.status_code >= 400:
@@ -158,8 +160,9 @@ def check_existing_urls(timeout=15, report_path=LINK_REPORT_PATH):
 
     if blocked:
         print(f"\n  [i] {len(blocked)} URL(s) blocked scripted requests (likely fine in a browser):")
-        for dev_id, url in blocked:
-            print(f"    id={dev_id} url={url}")
+        for dev_id, url, archive_url in blocked:
+            note = f" (archived: {archive_url})" if archive_url else " (no archive snapshot found)"
+            print(f"    id={dev_id} url={url}{note}")
 
     if report_path:
         with open(report_path, "w") as f:
@@ -168,7 +171,7 @@ def check_existing_urls(timeout=15, report_path=LINK_REPORT_PATH):
                 "checked": len(rows),
                 "migrated": updated,
                 "broken": [{"id": i, "url": u, "status": s, "archive_url": a} for i, u, s, a in broken],
-                "blocked": [{"id": i, "url": u} for i, u in blocked],
+                "blocked": [{"id": i, "url": u, "archive_url": a} for i, u, a in blocked],
             }, f, indent=2)
 
     print(f"\n  Checked {len(rows)} existing URLs — {updated} migrated, {len(broken)} broken, {len(blocked)} blocked")
