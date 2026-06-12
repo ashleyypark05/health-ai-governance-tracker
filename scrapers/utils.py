@@ -73,6 +73,18 @@ def count_developments():
     conn.close()
     return n
 
+def wayback_snapshot(url: str, timeout=10):
+    """Return an archive.org snapshot URL for `url` if one exists, else None."""
+    try:
+        r = requests.get("https://archive.org/wayback/available",
+                          params={"url": url}, timeout=timeout)
+        snap = r.json().get("archived_snapshots", {}).get("closest")
+        if snap and snap.get("available"):
+            return snap.get("url")
+    except (requests.RequestException, ValueError):
+        pass
+    return None
+
 def check_existing_urls(timeout=15, report_path=LINK_REPORT_PATH):
     """
     Re-check every stored source_url for redirects (e.g. a federal agency
@@ -107,7 +119,7 @@ def check_existing_urls(timeout=15, report_path=LINK_REPORT_PATH):
         try:
             r = requests.get(url, headers=LINK_CHECK_HEADERS, timeout=timeout, allow_redirects=True)
         except requests.RequestException as e:
-            broken.append((dev_id, url, str(e)))
+            broken.append((dev_id, url, str(e), wayback_snapshot(url)))
             continue
 
         if r.status_code == 403 and any(d in url for d in BOT_BLOCKED_DOMAINS):
@@ -115,7 +127,7 @@ def check_existing_urls(timeout=15, report_path=LINK_REPORT_PATH):
             continue
 
         if r.status_code >= 400:
-            broken.append((dev_id, url, r.status_code))
+            broken.append((dev_id, url, r.status_code, wayback_snapshot(url)))
             continue
 
         final_url = r.url
@@ -140,8 +152,9 @@ def check_existing_urls(timeout=15, report_path=LINK_REPORT_PATH):
 
     if broken:
         print(f"\n  [!] {len(broken)} URL(s) returned errors — review manually:")
-        for dev_id, url, status in broken:
-            print(f"    id={dev_id} status={status} url={url}")
+        for dev_id, url, status, archive_url in broken:
+            note = f" (archived: {archive_url})" if archive_url else " (no archive snapshot found)"
+            print(f"    id={dev_id} status={status} url={url}{note}")
 
     if blocked:
         print(f"\n  [i] {len(blocked)} URL(s) blocked scripted requests (likely fine in a browser):")
@@ -154,7 +167,7 @@ def check_existing_urls(timeout=15, report_path=LINK_REPORT_PATH):
                 "checked_at": datetime.utcnow().isoformat() + "Z",
                 "checked": len(rows),
                 "migrated": updated,
-                "broken": [{"id": i, "url": u, "status": s} for i, u, s in broken],
+                "broken": [{"id": i, "url": u, "status": s, "archive_url": a} for i, u, s, a in broken],
                 "blocked": [{"id": i, "url": u} for i, u in blocked],
             }, f, indent=2)
 

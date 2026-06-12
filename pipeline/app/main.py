@@ -1,5 +1,6 @@
 import streamlit as st
 import sqlite3
+import json
 import pandas as pd
 from datetime import datetime, timedelta
 import os
@@ -24,6 +25,17 @@ if "started" not in st.session_state:
 
 # ── DATA ─────────────────────────────────────────
 DB_PATH = os.path.join(os.path.dirname(__file__), "..", "..", "helpers", "data", "tracker.db")
+LINK_REPORT_PATH = os.path.join(os.path.dirname(__file__), "..", "..", "helpers", "data", "link_check_report.json")
+
+@st.cache_data(ttl=300)
+def load_broken_links():
+    """id -> archive.org snapshot URL (or None) for source_urls that are currently 404/broken."""
+    try:
+        with open(LINK_REPORT_PATH) as f:
+            report = json.load(f)
+        return {b["id"]: b.get("archive_url") for b in report.get("broken", [])}
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {}
 
 @st.cache_resource
 def get_conn():
@@ -54,6 +66,7 @@ SOURCES = ["FDA Digital Health","FDA AI/ML Medical Devices","CMS Newsroom","ONC 
            "California Legislature","Colorado Legislature","Manatt Health","AHA News","NIST AI RMF","STAT News"]
 
 df = load_data()
+BROKEN = load_broken_links()
 N  = len(df) if not df.empty else 31
 EN = int(len(df[df["action_tag"]=="new_law"])) if not df.empty else 6
 
@@ -68,7 +81,14 @@ def card(row):
     a  = row.get("action_tag") or ""
     u  = row.get("source_url") or ""
     ac = "tag-law" if a=="new_law" else "tag-act"
-    lh = f'<a class="sl" href="{u}" target="_blank">View source →</a>' if u else ""
+    if row.get("id") in BROKEN:
+        archive_url = BROKEN[row["id"]]
+        if archive_url:
+            lh = f'<a class="sl" href="{archive_url}" target="_blank">View archived source →</a>'
+        else:
+            lh = '<span class="sl sl-na">Source unavailable — summary preserved above</span>'
+    else:
+        lh = f'<a class="sl" href="{u}" target="_blank">View source →</a>' if u else ""
     ah = rdot(row.get("relevance_amc"))
     st.markdown(f"""<div class="dc"><div class="dct dc-{d}"></div><div class="dcb">
       <div class="cm">{row.get('source_name','')} · {row.get('date_published','')}</div>
@@ -589,6 +609,7 @@ div[data-testid="stVerticalBlock"]:has(> div.element-container > div.stMarkdown 
 .sl{font-family:'Inter',sans-serif;font-size:.8rem;color:var(--sky);
   text-decoration:none;font-weight:600;margin-left:1rem}
 .sl:hover{color:var(--navy)}
+.sl-na{color:var(--muted);font-style:italic;font-weight:500;cursor:default}
 @media(max-width:768px){
   .rb{margin-left:0}
   .sl{margin-left:auto}
@@ -834,7 +855,14 @@ button[kind="primary"],button[kind="primaryFormSubmit"]{color:var(--navy)!import
                 ch = ""
                 for _,row in grp.head(3).iterrows():
                     u = row.get("source_url","")
-                    lk = f'<a class="ddcl" href="{u}" target="_blank">View source →</a>' if u else ""
+                    if row.get("id") in BROKEN:
+                        archive_url = BROKEN[row["id"]]
+                        if archive_url:
+                            lk = f'<a class="ddcl" href="{archive_url}" target="_blank">View archived source →</a>'
+                        else:
+                            lk = '<span class="ddcl sl-na">Source unavailable — summary above</span>'
+                    else:
+                        lk = f'<a class="ddcl" href="{u}" target="_blank">View source →</a>' if u else ""
                     ch += f'<div class="ddc"><div class="ddct">{row["title"]}</div><div class="ddcs">{row["summary"]}</div>{lk}</div>'
                 st.markdown(f'<div class="dds2"><div class="ddh"><span class="ddd ddd-{dom}"></span><span class="ddn">{lbl}</span></div><div class="ddcw">{ch}</div></div>', unsafe_allow_html=True)
             lines = ["PULSE — HEALTH AI POLICY DIGEST",f"{now.strftime('%B %Y')} Edition","="*58,""]
