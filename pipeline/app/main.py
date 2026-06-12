@@ -152,9 +152,15 @@ section[data-testid="stSidebar"]{display:none}
   padding:.85rem 2.4rem;border:1px solid transparent;border-radius:999px;
 }
 @media(max-width:768px){
+  html,body,.stApp{
+    background:
+      radial-gradient(ellipse at 30% 40%,#0d2a6e 0%,transparent 60%),
+      radial-gradient(ellipse at 75% 25%,#091a4f 0%,transparent 55%),
+      #04080F !important;
+  }
   [data-testid="stVerticalBlock"]{justify-content:center}
   .element-container:has(.land){flex:0 0 auto}
-  .land{min-height:0;padding-bottom:0}
+  .land{min-height:0;padding-bottom:0;background:transparent}
   .lhero{width:100%}
   .lrow{width:100%}
   .lbtn-ghost{display:none}
@@ -188,7 +194,6 @@ section[data-testid="stSidebar"]{display:none}
 div[data-testid="stButton"]{width:auto!important;max-width:none!important;display:block}
 @media(max-width:768px){
   div[data-testid="stButton"]{width:100%!important;max-width:100%!important;display:flex;justify-content:center}
-  div[data-testid="stButton"] button{width:177px;max-width:177px;font-size:1.2rem!important;padding:.9rem 2rem!important}
 }
 div[data-testid="stButton"] button{
   background:transparent!important;color:#fff!important;
@@ -203,6 +208,9 @@ div[data-testid="stButton"] button{
 div[data-testid="stButton"] button:hover{
   background:#fff!important;color:#0B2545!important;
   border-color:#fff!important;animation:none!important;
+}
+@media(max-width:768px){
+  div[data-testid="stButton"] button{font-size:1rem!important;padding:.5rem 1.5rem!important}
 }
 </style>
 <div class="land">
@@ -318,9 +326,10 @@ div:has(.ssm) + div .ft{margin-top:0}
 .hba{font-size:1.05rem;color:var(--navy);line-height:1.75;max-width:600px}
 .hba span{color:var(--teal);font-weight:600}
 @media(max-width:768px){
-  .hero{padding-top:2.33rem}
+  .hero{padding:1.55rem 2rem 2.67rem}
+  .hey{font-weight:800}
   .hh{font-size:2.8rem;line-height:1.3}
-  .hh em{font-weight:500}
+  .hh em{font-weight:500;font-size:2rem}
 }
 
 /* HERO MOSAIC — decorative mint/navy/champagne blob cluster filling
@@ -580,6 +589,10 @@ div[data-testid="stVerticalBlock"]:has(> div.element-container > div.stMarkdown 
 .sl{font-family:'Inter',sans-serif;font-size:.8rem;color:var(--sky);
   text-decoration:none;font-weight:600;margin-left:1rem}
 .sl:hover{color:var(--navy)}
+@media(max-width:768px){
+  .rb{margin-left:0}
+  .sl{margin-left:auto}
+}
 .es{text-align:center;padding:6rem 2rem;color:#94a3b8;font-size:1.1rem}
 
 /* DIGEST */
