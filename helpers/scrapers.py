@@ -16,7 +16,7 @@ import sys
 import os
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
-from scrapers.utils import insert_development, clean_text, count_developments
+from scrapers.utils import insert_development, clean_text, count_developments, check_existing_urls
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (compatible; HealthAIPolicyTracker/1.0)"
@@ -510,6 +510,11 @@ def run_all_scrapers(sources=None):
     after = count_developments()
     print(f"\n{'─'*50}")
     print(f"Run complete. {after - before} new developments added. Total: {after}")
+
+    print(f"\n{'─'*50}")
+    print("Checking existing source URLs for migrations / broken links...")
+    check_existing_urls()
+
     return total_new
 
 
