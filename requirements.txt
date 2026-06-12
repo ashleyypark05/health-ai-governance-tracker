@@ -1,0 +1,22 @@
+# Health AI Governance Policy Tracker
+# Install: pip install -r requirements.txt
+
+# Scraping
+requests==2.32.3
+beautifulsoup4==4.12.3
+feedparser==6.0.11
+playwright==1.45.0        # for dynamic JS sites (install browsers: playwright install chromium)
+lxml==5.2.2               # faster BS4 parser
+
+# LLM
+openai==2.5.0
+
+# Scheduling
+schedule==1.2.2
+
+# App
+streamlit==1.36.0
+pandas==2.2.2
+
+# Utilities
+python-dotenv==1.0.1
