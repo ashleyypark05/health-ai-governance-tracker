@@ -152,7 +152,9 @@ section[data-testid="stSidebar"]{display:none}
   padding:.85rem 2.4rem;border:1px solid transparent;border-radius:999px;
 }
 @media(max-width:768px){
-  .land{min-height:0}
+  [data-testid="stVerticalBlock"]{justify-content:center}
+  .element-container:has(.land){flex:0 0 auto}
+  .land{min-height:0;padding-bottom:0}
   .lhero{width:100%}
   .lrow{width:100%}
   .lbtn-ghost{display:none}
@@ -178,7 +180,7 @@ section[data-testid="stSidebar"]{display:none}
 @media(min-width:1440px){.element-container:has(div[data-testid="stButton"]){right:calc(50% - 33.13rem)}}
 @media(max-width:768px){
   .element-container:has(div[data-testid="stButton"]){
-    position:static;background:#04080F;padding:2rem 2rem 2.5rem;
+    position:static;padding:1.5rem 1.5rem 2.5rem;
     display:flex;justify-content:center;
     width:100%!important;max-width:100%!important;
   }
@@ -186,7 +188,7 @@ section[data-testid="stSidebar"]{display:none}
 div[data-testid="stButton"]{width:auto!important;max-width:none!important;display:block}
 @media(max-width:768px){
   div[data-testid="stButton"]{width:100%!important;max-width:100%!important;display:flex;justify-content:center}
-  div[data-testid="stButton"] button{width:100%;max-width:320px;font-size:1.2rem!important;padding:.9rem 2rem!important}
+  div[data-testid="stButton"] button{width:177px;max-width:177px;font-size:1.2rem!important;padding:.9rem 2rem!important}
 }
 div[data-testid="stButton"] button{
   background:transparent!important;color:#fff!important;
@@ -302,6 +304,7 @@ section[data-testid="stSidebar"]{display:none}
   display:flex;align-items:center;justify-content:space-between;margin-top:4rem}
 div:has(.ssm) + div .ft{margin-top:0}
 @media(max-width:480px){.ft{padding:1.5rem 1.25rem;flex-direction:column;gap:1rem;align-items:flex-start}}
+@media(max-width:480px){.ft > div:first-child{font-size:.5rem!important;white-space:nowrap}}
 
 /* HERO */
 .hero{padding:3.5rem 3rem 4rem;max-width:1160px;margin:0 auto;position:relative}
@@ -314,6 +317,11 @@ div:has(.ssm) + div .ft{margin-top:0}
 .hb{font-size:1.05rem;color:var(--navy);line-height:1.75;max-width:600px;margin-bottom:1.84rem}
 .hba{font-size:1.05rem;color:var(--navy);line-height:1.75;max-width:600px}
 .hba span{color:var(--teal);font-weight:600}
+@media(max-width:768px){
+  .hero{padding-top:2.33rem}
+  .hh{font-size:2.8rem;line-height:1.3}
+  .hh em{font-weight:500}
+}
 
 /* HERO MOSAIC — decorative mint/navy/champagne blob cluster filling
    the empty space beside the hero copy on wide viewports only.
@@ -537,6 +545,16 @@ div[data-testid="stVerticalBlock"]:has(> div.element-container > div.stMarkdown 
 .dc-general_health_ai{background:var(--dom-grey)}
 .dcb{padding:1.6rem 1.8rem}
 @media(max-width:480px){.dcb{padding:1.2rem 1.3rem}}
+
+/* DOWNLOAD BUTTON ICON — minimalistic line icon (matches .wi svg style)
+   replacing the emoji glyph in st.download_button labels */
+[data-testid="stDownloadButton"] button{display:inline-flex;align-items:center;gap:.5rem}
+[data-testid="stDownloadButton"] button::before{
+  content:'';display:inline-block;flex-shrink:0;width:1em;height:1em;
+  background-color:currentColor;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4'/%3E%3Cpolyline points='7 10 12 15 17 10'/%3E%3Cline x1='12' y1='15' x2='12' y2='3'/%3E%3C/svg%3E") no-repeat center/contain;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4'/%3E%3Cpolyline points='7 10 12 15 17 10'/%3E%3Cline x1='12' y1='15' x2='12' y2='3'/%3E%3C/svg%3E") no-repeat center/contain;
+}
 .cm{font-family:'Inter',sans-serif;font-size:.68rem;font-weight:500;color:#8aa4bd;
   letter-spacing:.04em;text-transform:uppercase;margin-bottom:.55rem}
 .ct{font-family:'Inter',sans-serif;font-size:1.1rem;font-weight:700;
@@ -569,6 +587,10 @@ div[data-testid="stVerticalBlock"]:has(> div.element-container > div.stMarkdown 
 @media(max-width:768px){.dh{padding:2rem 1.5rem}}
 .dhe{font-family:'Inter',sans-serif;font-size:1.16rem;font-weight:400;letter-spacing:.14em;
   text-transform:uppercase;color:var(--teal);margin-bottom:.7rem}
+@media(max-width:768px){
+  .dhe-sep{display:none}
+  .dhe-month{display:block}
+}
 .dht{font-family:'Inter',sans-serif;font-size:1.9rem;font-weight:800;
   color:#fff;margin-bottom:.9rem;letter-spacing:-.02em;line-height:1.2;max-width:none}
 .dhb{font-size:.98rem;color:rgba(255,255,255,.6);line-height:1.72;max-width:none}
@@ -771,7 +793,7 @@ button[kind="primary"],button[kind="primaryFormSubmit"]{color:var(--navy)!import
                 for _,row in f.iterrows(): card(row.to_dict())
                 st.markdown("---")
                 csv = f[["source_name","title","date_published","summary","domain_tag","action_tag","relevance_amc","relevance_payer","relevance_dh","source_url"]].to_csv(index=False)
-                st.download_button("⬇ Export as CSV", data=csv, file_name=f"pulse_{datetime.now().strftime('%Y%m%d')}.csv", mime="text/csv")
+                st.download_button("Export as CSV", data=csv, file_name=f"pulse_{datetime.now().strftime('%Y%m%d')}.csv", mime="text/csv")
         footer()
 
     # ── MONTHLY DIGEST ────────────────────────
@@ -788,7 +810,7 @@ button[kind="primary"],button[kind="primaryFormSubmit"]{color:var(--navy)!import
         dhb_text = _cached_digest_summary(mo, month_label)
 
         st.markdown(f"""<div class="dh">
-          <div class="dhe">Monthly Digest · {month_label}</div>
+          <div class="dhe">Monthly Digest<span class="dhe-sep"> · </span><span class="dhe-month">{month_label}</span></div>
           <div class="dht">{dht_text}</div>
           <div class="dhb">{dhb_text}</div>
         </div>""", unsafe_allow_html=True)
@@ -809,7 +831,7 @@ button[kind="primary"],button[kind="primaryFormSubmit"]{color:var(--navy)!import
                     lines += [f"  {row['title']}",f"  {row['summary']}"]
                     if row.get("source_url"): lines.append(f"  → {row['source_url']}")
                     lines.append("")
-            st.download_button("⬇ Download digest (.txt)", data="\n".join(lines), file_name=f"pulse_digest_{now.strftime('%Y%m')}.txt", mime="text/plain")
+            st.download_button("Download digest (.txt)", data="\n".join(lines), file_name=f"pulse_digest_{now.strftime('%Y%m')}.txt", mime="text/plain")
 
         BK = os.environ.get("BEEHIIV_API_KEY","")
         BP = os.environ.get("BEEHIIV_PUB_ID","")
