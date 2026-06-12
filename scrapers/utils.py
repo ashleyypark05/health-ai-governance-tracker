@@ -3,16 +3,22 @@ Shared utilities for all scrapers.
 """
 import sqlite3
 import hashlib
+import json
 import os
 import re
 import requests
 from datetime import datetime
 
 DB_PATH = os.path.join(os.path.dirname(__file__), "..", "helpers", "data", "tracker.db")
+LINK_REPORT_PATH = os.path.join(os.path.dirname(__file__), "..", "helpers", "data", "link_check_report.json")
 
 LINK_CHECK_HEADERS = {
     "User-Agent": "Mozilla/5.0 (compatible; HealthAIPolicyTracker/1.0)"
 }
+
+# Sites that block scripted requests (403) even though the link works fine
+# in a browser. Don't flag these as broken.
+BOT_BLOCKED_DOMAINS = ("congress.gov",)
 
 def get_db():
     return sqlite3.connect(DB_PATH)
@@ -67,7 +73,7 @@ def count_developments():
     conn.close()
     return n
 
-def check_existing_urls(timeout=15):
+def check_existing_urls(timeout=15, report_path=LINK_REPORT_PATH):
     """
     Re-check every stored source_url for redirects (e.g. a federal agency
     reorganized its site and the old page now forwards to a new one) and
@@ -75,8 +81,14 @@ def check_existing_urls(timeout=15):
 
     - If a URL now resolves to a different final URL, update source_url
       (and content_hash, since it's derived from source_url|title) in place.
-    - If a URL errors out or returns 4xx/5xx, it's left untouched but
-      reported so it can be reviewed manually.
+    - If a URL errors out or returns 4xx/5xx, it's left untouched. A flat
+      404 with no redirect (e.g. a site that restructured without setting
+      up forwarding) can't be auto-resolved — there's no hint of where the
+      content moved to, so it's written to report_path for manual review
+      instead.
+    - URLs on BOT_BLOCKED_DOMAINS that return 403 are treated as "blocked,
+      probably fine" rather than broken, since those sites reject scripted
+      requests but work in a browser.
 
     Returns (updated_count, broken_list).
     """
@@ -87,6 +99,7 @@ def check_existing_urls(timeout=15):
 
     updated = 0
     broken = []
+    blocked = []
 
     for dev_id, url, title in rows:
         if not url:
@@ -95,6 +108,10 @@ def check_existing_urls(timeout=15):
             r = requests.get(url, headers=LINK_CHECK_HEADERS, timeout=timeout, allow_redirects=True)
         except requests.RequestException as e:
             broken.append((dev_id, url, str(e)))
+            continue
+
+        if r.status_code == 403 and any(d in url for d in BOT_BLOCKED_DOMAINS):
+            blocked.append((dev_id, url))
             continue
 
         if r.status_code >= 400:
@@ -126,5 +143,20 @@ def check_existing_urls(timeout=15):
         for dev_id, url, status in broken:
             print(f"    id={dev_id} status={status} url={url}")
 
-    print(f"\n  Checked {len(rows)} existing URLs — {updated} migrated, {len(broken)} broken")
+    if blocked:
+        print(f"\n  [i] {len(blocked)} URL(s) blocked scripted requests (likely fine in a browser):")
+        for dev_id, url in blocked:
+            print(f"    id={dev_id} url={url}")
+
+    if report_path:
+        with open(report_path, "w") as f:
+            json.dump({
+                "checked_at": datetime.utcnow().isoformat() + "Z",
+                "checked": len(rows),
+                "migrated": updated,
+                "broken": [{"id": i, "url": u, "status": s} for i, u, s in broken],
+                "blocked": [{"id": i, "url": u} for i, u in blocked],
+            }, f, indent=2)
+
+    print(f"\n  Checked {len(rows)} existing URLs — {updated} migrated, {len(broken)} broken, {len(blocked)} blocked")
     return updated, broken
