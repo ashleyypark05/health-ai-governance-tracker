@@ -1,38 +1,38 @@
 name: Daily scrape + summarize
 
-  on:
-    schedule:
-      - cron: "0 11 * * *"   # 11:00 UTC daily (~7am ET)
-    workflow_dispatch: {}
+on:
+  schedule:
+    - cron: "0 11 * * *"   # 11:00 UTC daily (~7am ET)
+  workflow_dispatch: {}
 
-  permissions:
-    contents: write
-  
-  jobs:
-    pipeline:
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v4
+permissions:
+  contents: write
 
-        - uses: actions/setup-python@v5
-          with:
-            python-version: "3.11"
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
 
-        - name: Install dependencies
-          run: pip install -r requirements.txt
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
 
-        - name: Run scrapers
-          run: python helpers/scrapers.py
-  
-        - name: Summarize + tag new developments
-          env:
-            OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          run: python content/summarize.py
+      - name: Install dependencies
+        run: pip install -r requirements.txt
 
-        - name: Commit updated database
-          run: |
-            git config user.name "github-actions[bot]"
-            git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add helpers/data/tracker.db
-            git diff --staged --quiet || git commit -m "chore: daily scrape + summarize $(date -u +%Y-%m-%d)"
-            git push
+      - name: Run scrapers
+        run: python helpers/scrapers.py
+
+      - name: Summarize + tag new developments
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python content/summarize.py
+
+      - name: Commit updated database
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add helpers/data/tracker.db
+          git diff --staged --quiet || git commit -m "chore: daily scrape + summarize $(date -u +%Y-%m-%d)"
+          git push

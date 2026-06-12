@@ -1,27 +1,27 @@
 name: Monthly digest email
 
-  on:
-    schedule:
-      - cron: "0 13 15 * *"  # 13:00 UTC on the 15th, after the daily pipeline run
-    workflow_dispatch: {}
+on:
+  schedule:
+    - cron: "0 13 15 * *"  # 13:00 UTC on the 15th, after the daily pipeline run
+  workflow_dispatch: {}
 
-  jobs:
-    digest:
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v4
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
 
-        - uses: actions/setup-python@v5
-          with:
-            python-version: "3.11"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
 
-        - name: Install dependencies
-          run: pip install -r requirements.txt
+      - name: Install dependencies
+        run: pip install -r requirements.txt
 
-        - name: Build + send digest
-          env:
-            OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-            BEEHIIV_API_KEY: ${{ secrets.BEEHIIV_API_KEY }}
-            BEEHIIV_PUB_ID: ${{ secrets.BEEHIIV_PUB_ID }}
-            PULSE_APP_URL: ${{ secrets.PULSE_APP_URL }}
-          run: python pipeline/send_digest.py
+      - name: Build + send digest
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          BEEHIIV_API_KEY: ${{ secrets.BEEHIIV_API_KEY }}
+          BEEHIIV_PUB_ID: ${{ secrets.BEEHIIV_PUB_ID }}
+          PULSE_APP_URL: ${{ secrets.PULSE_APP_URL }}
+        run: python pipeline/send_digest.py
