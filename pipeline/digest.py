@@ -198,6 +198,18 @@ def email_subject(mo, month_label):
     return f"Pulse — {month_label} Digest: {digest_lead_domains(mo, n=2)}"
 
 
+def email_preview_text(mo):
+    """Short preheader shown next to the subject line in inbox previews."""
+    if mo.empty:
+        return "No new health AI policy developments were tracked this period."
+    n = len(mo)
+    enacted = int((mo["action_tag"] == "new_law").sum())
+    if enacted:
+        return (f"{n} development{_plural(n)} tracked this month, including "
+                f"{enacted} newly enacted law{_plural(enacted)} with compliance implications.")
+    return digest_title(mo)
+
+
 def render_email_html(mo, month_label, year, title=None, summary=None, top=None, digest_url=None):
     title = title if title is not None else digest_title(mo)
     summary = summary if summary is not None else digest_summary(mo, month_label)
@@ -222,14 +234,26 @@ def render_email_html(mo, month_label, year, title=None, summary=None, top=None,
 
     return f"""<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300..800;1,300..800&family=Michroma&display=swap">
+  </head>
   <body style="margin:0;padding:0;background:#F0F4F9;font-family:Helvetica,Arial,sans-serif">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F0F4F9">
       <tr><td align="center" style="padding:32px 16px">
         <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border-radius:14px;overflow:hidden">
           <tr><td style="background:#0B2545;padding:24px 32px">
-            <span style="font-size:24px;font-weight:800;color:#ffffff;letter-spacing:-.02em">Pulse</span>
-            <span style="display:inline-block;width:6px;height:6px;background:#00C2A8;border-radius:50%;margin-left:6px"></span>
-            <div style="font-size:12px;color:rgba(255,255,255,.65);margin-top:4px">Health AI Policy Tracker</div>
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+              <tr>
+                <td align="left" style="vertical-align:middle">
+                  <span style="font-family:'Michroma','Inter',Helvetica,Arial,sans-serif;font-size:24px;color:#ffffff;letter-spacing:-.02em;vertical-align:middle">Pulse</span>
+                  <span style="display:inline-block;vertical-align:middle;width:6px;height:6px;background:#00C2A8;border-radius:50%;margin-left:6px"></span>
+                </td>
+                <td align="right" style="vertical-align:middle;font-family:'Inter',Helvetica,Arial,sans-serif;font-size:12px;color:rgba(255,255,255,.65)">Health AI Policy Tracker — In Your Pocket</td>
+              </tr>
+            </table>
           </td></tr>
           <tr><td style="padding:32px 32px 8px">
             <div style="font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#00C2A8;margin-bottom:10px">Monthly Digest · {month_label}</div>
@@ -245,8 +269,8 @@ def render_email_html(mo, month_label, year, title=None, summary=None, top=None,
             <a href="{digest_url}" style="display:inline-block;background:#00C2A8;color:#0B2545;font-weight:700;font-size:15px;text-decoration:none;padding:14px 36px;border-radius:999px">Read the full digest →</a>
           </td></tr>
           <tr><td style="background:#0B2545;padding:24px 32px;text-align:center">
-            <div style="font-size:16px;font-weight:800;color:#ffffff;letter-spacing:-.02em">Pulse <span style="color:#00C2A8">●</span></div>
-            <div style="font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-top:8px">© {year} Pulse · Health AI Policy Tracker · Updated daily</div>
+            <div style="font-family:'Michroma','Inter',Helvetica,Arial,sans-serif;font-size:16px;color:#ffffff;letter-spacing:-.02em">Pulse <span style="display:inline-block;vertical-align:middle;width:6px;height:6px;background:#00C2A8;border-radius:50%;margin-left:2px"></span></div>
+            <div style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-top:8px">© {year} Pulse · Health AI Policy Tracker · Updated daily</div>
           </td></tr>
         </table>
       </td></tr>

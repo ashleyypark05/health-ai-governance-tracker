@@ -9,8 +9,9 @@ Usage:
   python pipeline/send_digest.py            # create a draft post in Beehiiv
   python pipeline/send_digest.py --preview  # write HTML to pipeline/digest_preview.html
 
-Schedule this with cron or GitHub Actions to run on the 15th of each
-month (the date referenced in the app's subscription copy).
+Schedule this with cron or GitHub Actions to run on the 14th of each
+month — a day ahead of the 15th send date referenced in the app's
+subscription copy, leaving time to review the draft.
 
 Required env vars (.env):
   OPENAI_API_KEY          for the LLM-written summary (falls back to a
@@ -20,7 +21,8 @@ Required env vars (.env):
                            (defaults to https://pulse-tracker.streamlit.app)
 
 The post is created with status "draft" — review and send it from the
-Beehiiv dashboard rather than auto-publishing.
+Beehiiv dashboard rather than auto-publishing. Subject line, preview
+text, and thumbnail are pre-filled.
 """
 import argparse
 import os
@@ -34,8 +36,10 @@ from dotenv import load_dotenv
 sys.path.insert(0, os.path.dirname(__file__))
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
-from digest import month_developments, digest_title, digest_summary, email_subject, render_email_html
+from digest import month_developments, digest_title, digest_summary, email_subject, email_preview_text, render_email_html
 from scrapers.utils import DB_PATH
+
+THUMBNAIL_URL = "https://raw.githubusercontent.com/ashleyypark05/health-ai-governance-tracker/main/pipeline/assets/pulse_thumbnail.png"
 
 
 def load_df():
@@ -66,10 +70,12 @@ def main():
     title = digest_title(mo)
     summary = digest_summary(mo, month_label)
     subject = email_subject(mo, month_label)
+    preview_text = email_preview_text(mo)
     digest_url = os.environ.get("PULSE_APP_URL", "https://pulse-tracker.streamlit.app")
     html = render_email_html(mo, month_label, now.year, title=title, summary=summary, digest_url=digest_url)
 
     print(f"Subject: {subject}")
+    print(f"Preview: {preview_text}")
     print(f"Title:   {title}")
     print(f"Summary: {summary}\n")
 
@@ -95,6 +101,9 @@ def main():
             "content_html": html,
             "status": "draft",
             "platform": "email",
+            "email_subject_line": subject,
+            "email_preview_text": preview_text,
+            "thumbnail_image_url": THUMBNAIL_URL,
         },
         timeout=15,
     )
