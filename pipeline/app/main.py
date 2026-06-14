@@ -901,21 +901,24 @@ button[kind="primary"],button[kind="primaryFormSubmit"]{color:var(--navy)!import
           <div class="subb">Just one email, the month's most important health AI policy developments — tagged, summarized, and ready to act on.</div>
           <div class="subd">✦ Every 15th &nbsp;·&nbsp; ✦ Unsubscribe anytime &nbsp;·&nbsp; ✦ Stay ahead of industry news</div></div>""", unsafe_allow_html=True)
         with st.form("sub"):
+            c1, c2 = st.columns(2)
+            with c1: fn = st.text_input("First name")
+            with c2: ln = st.text_input("Last name")
             em = st.text_input("Email address", placeholder="you@organization.org")
-            rl = st.selectbox("I work in", ["Select your role","Health system / Academic medical center","Digital health / AI company","Health plan / Payer","Policy / Government","Research / Academia","Consulting / Law","Other"])
+            occ = st.selectbox("I work in", ["Select your occupation","Health system / Academic medical center","Digital health / AI company","Health plan / Payer","Policy / Government","Research / Academia","Consulting / Law","Other"])
             if st.form_submit_button("Subscribe to monthly digest →", type="primary"):
-                if em and "@" in em and rl!="Select your role":
+                if fn and ln and em and "@" in em and occ!="Select your occupation":
                     cn = get_conn()
                     if cn:
                         try:
-                            cn.execute("CREATE TABLE IF NOT EXISTS subscribers (id INTEGER PRIMARY KEY, email TEXT UNIQUE, role TEXT, subscribed_at TEXT)")
-                            cn.execute("INSERT OR IGNORE INTO subscribers (email,role,subscribed_at) VALUES (?,?,?)",(em,rl,now.isoformat()))
+                            cn.execute("CREATE TABLE IF NOT EXISTS subscribers (id INTEGER PRIMARY KEY, first_name TEXT, last_name TEXT, email TEXT UNIQUE, occupation TEXT, subscribed_at TEXT)")
+                            cn.execute("INSERT OR IGNORE INTO subscribers (first_name,last_name,email,occupation,subscribed_at) VALUES (?,?,?,?,?)",(fn,ln,em,occ,now.isoformat()))
                             cn.commit()
                         except: pass
                     if BK and BP:
-                        try: http_requests.post(f"https://api.beehiiv.com/v2/publications/{BP}/subscriptions",headers={"Authorization":f"Bearer {BK}","Content-Type":"application/json"},json={"email":em,"reactivate_existing":False,"send_welcome_email":True},timeout=5)
+                        try: http_requests.post(f"https://api.beehiiv.com/v2/publications/{BP}/subscriptions",headers={"Authorization":f"Bearer {BK}","Content-Type":"application/json"},json={"email":em,"first_name":fn,"last_name":ln,"reactivate_existing":False,"send_welcome_email":True,"tags":[occ]},timeout=5)
                         except: pass
                     n15 = (now.replace(day=1)+timedelta(days=32)).replace(day=15).strftime("%B 15")
                     st.success(f"✓ Subscribed. You'll receive the {n15} digest at {em}.")
-                else: st.warning("Please enter a valid email and select your role.")
+                else: st.warning("Please enter your name, a valid email, and select your occupation.")
         footer()
