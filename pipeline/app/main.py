@@ -916,7 +916,7 @@ button[kind="primary"],button[kind="primaryFormSubmit"]{color:var(--navy)!import
                             cn.commit()
                         except: pass
                     if BK and BP:
-                        try: http_requests.post(f"https://api.beehiiv.com/v2/publications/{BP}/subscriptions",headers={"Authorization":f"Bearer {BK}","Content-Type":"application/json"},json={"email":em,"first_name":fn,"last_name":ln,"reactivate_existing":False,"send_welcome_email":True,"tags":[occ]},timeout=5)
+                        try: http_requests.post(f"https://api.beehiiv.com/v2/publications/{BP}/subscriptions",headers={"Authorization":f"Bearer {BK}","Content-Type":"application/json"},json={"email":em,"first_name":fn,"last_name":ln,"reactivate_existing":False,"send_welcome_email":True,"tags":[occ],"custom_fields":[{"name":"Occupation","value":occ}]},timeout=5)
                         except: pass
                     n15 = (now.replace(day=1)+timedelta(days=32)).replace(day=15).strftime("%B 15")
                     st.success(f"✓ Subscribed. You'll receive the {n15} digest at {em}.")
