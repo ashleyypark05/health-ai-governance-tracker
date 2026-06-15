@@ -245,15 +245,11 @@ def render_email_html(mo, month_label, year, title=None, summary=None, top=None,
       <tr><td align="center" style="padding:32px 16px">
         <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border-radius:14px;overflow:hidden">
           <tr><td style="background:#0B2545;padding:24px 32px">
-            <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
-              <tr>
-                <td align="left" style="vertical-align:middle">
-                  <span style="font-family:'Michroma','Inter',Helvetica,Arial,sans-serif;font-size:24px;color:#ffffff;letter-spacing:-.02em;vertical-align:middle">Pulse</span>
-                  <span style="display:inline-block;vertical-align:middle;width:6px;height:6px;background:#00C2A8;border-radius:50%;margin-left:6px"></span>
-                </td>
-                <td align="right" style="vertical-align:middle;font-family:'Inter',Helvetica,Arial,sans-serif;font-size:12px;color:rgba(255,255,255,.65)">Health AI Policy Tracker — In Your Pocket</td>
-              </tr>
-            </table>
+            <div>
+              <span style="font-family:'Michroma','Inter',Helvetica,Arial,sans-serif;font-size:24px;color:#ffffff;letter-spacing:-.02em;vertical-align:middle">Pulse</span>
+              <span style="display:inline-block;vertical-align:middle;width:6px;height:6px;background:#00C2A8;border-radius:50%;margin-left:6px"></span>
+            </div>
+            <div style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:12px;color:rgba(255,255,255,.65);margin-top:4px">Health AI Policy Tracker — In Your Pocket</div>
           </td></tr>
           <tr><td style="padding:32px 32px 8px">
             <div style="font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#00C2A8;margin-bottom:10px">Monthly Digest · {month_label}</div>
