@@ -107,6 +107,15 @@ def main():
         },
         timeout=15,
     )
+    if resp.status_code == 403 and "SEND_API_NOT_ENTERPRISE_PLAN" in resp.text:
+        out_path = os.path.join(os.path.dirname(__file__), "digest_preview.html")
+        with open(out_path, "w") as f:
+            f.write(html)
+        print("Beehiiv's post-creation API requires an Enterprise plan — draft post wasn't created.")
+        print(f"HTML written to {out_path} instead. Paste it into a new Beehiiv draft post "
+              f"(HTML/code view), then set the subject line, preview text, and thumbnail above manually.")
+        return
+
     resp.raise_for_status()
     print("Digest post created in Beehiiv (status: draft). Review and send from the Beehiiv dashboard.")
 

@@ -28,14 +28,32 @@ jobs:
           BEEHIIV_API_KEY: ${{ secrets.BEEHIIV_API_KEY }}
           BEEHIIV_PUB_ID: ${{ secrets.BEEHIIV_PUB_ID }}
           PULSE_APP_URL: ${{ secrets.PULSE_APP_URL }}
-        run: python pipeline/send_digest.py
+        run: python pipeline/send_digest.py | tee digest_output.txt
+
+      - name: Upload digest preview
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: digest-preview
+          path: pipeline/digest_preview.html
+          if-no-files-found: ignore
 
       - name: Open review reminder
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
           MONTH=$(date -u +'%B %Y')
+          SUBJECT=$(grep '^Subject:' digest_output.txt | sed 's/^Subject: //')
+          PREVIEW=$(grep '^Preview:' digest_output.txt | sed 's/^Preview: //')
+          if grep -q "Digest post created in Beehiiv" digest_output.txt; then
+            printf '%s\n\n**Subject:** %s\n**Preview text:** %s\n\nReview it in the [Beehiiv dashboard](https://app.beehiiv.com/), then send it before the 15th.\n' \
+              "The $MONTH digest draft was built and pushed to Beehiiv as a draft (status: draft)." "$SUBJECT" "$PREVIEW" > issue_body.md
+          else
+            printf '%s\n\n**Subject:** %s\n**Preview text:** %s\n\nDownload the rendered HTML from this run'"'"'s `digest-preview` artifact, paste it into a new Beehiiv draft post (HTML/code view), set the subject line/preview text above and the thumbnail, then review and send before the 15th.\n\nWorkflow run: %s\n' \
+              "The $MONTH digest content has been generated, but Beehiiv's post-creation API requires an Enterprise plan, so the draft wasn't created automatically." "$SUBJECT" "$PREVIEW" "$RUN_URL" > issue_body.md
+          fi
           gh issue create \
             --title "Review Pulse digest draft — $MONTH" \
             --assignee ashleyypark05 \
-            --body "The $MONTH digest draft was built and pushed to Beehiiv as a draft (status: draft). Review the subject line, preview text, thumbnail, and content in the [Beehiiv dashboard](https://app.beehiiv.com/), then send it before the 15th."
+            --body-file issue_body.md
