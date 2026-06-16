@@ -1,13 +1,20 @@
 {
-  "checked_at": "2026-06-12T15:13:13.260801Z",
-  "checked": 31,
-  "migrated": 0,
-  "broken": [],
+  "checked_at": "2026-06-16T22:11:48.680507Z",
+  "checked": 51,
+  "migrated": 3,
+  "broken": [
+    {
+      "id": 45,
+      "url": "https://www.commerce.gov/vulnerability-disclosure-policy",
+      "status": 403,
+      "archive_url": "http://web.archive.org/web/20260512000210/https://www.commerce.gov/vulnerability-disclosure-policy"
+    }
+  ],
   "blocked": [
     {
       "id": 15,
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/7757",
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260507113628/https://www.congress.gov/bill/119th-congress/house-bill/7757"
     }
   ]
 }
