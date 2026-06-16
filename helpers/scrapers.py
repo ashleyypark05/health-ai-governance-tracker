@@ -28,35 +28,56 @@ HEADERS = {
 
 def scrape_fda_digital_health():
     """
-    FDA Digital Health Center of Excellence news + guidance updates.
-    Covers: AI/ML-based SaMD, CDS guidance, TEMPO pilot, device regulation.
+    FDA Digital Health Center of Excellence — AI/ML-enabled SaMD guidance,
+    RFCs, PCCP submissions, CDS software guidance.
+    Scrapes the DHCoE landing page and filters for AI/ML-relevant links.
     """
     items = []
-    url = "https://www.fda.gov/medical-devices/digital-health-center-excellence/digital-health-center-excellence-news-and-updates"
+    url = "https://www.fda.gov/medical-devices/digital-health-center-excellence"
+    ai_url_kws = ["artificial-intell", "machine-learning", "clinical-decision",
+                  "pccp", "samd", "software-medical", "measuring-and-evaluating"]
+    ai_title_kws = ["artificial intelligence", "machine learning", "ai-enabled", "ai/ml",
+                    "software as a medical", "clinical decision", "pccp",
+                    "digital health and ai", "request for public comment",
+                    "measuring and evaluating", "marketing submission recommendations",
+                    "lifecycle management"]
+    exclude_url_kws = ["/about-", "/services", "/terms", "/faq", "/network-",
+                       "/advisory-", "/research-and-partner", "/what-is-",
+                       "/policy-navigator", "/ask-", "/request-a-speaker",
+                       "/wireless-", "/augmented-", "/regulatory-accelerat",
+                       "/diagnostic-data", "/medical-device-inter", "/request-a-"]
+    seen_urls = set()
     try:
         r = requests.get(url, headers=HEADERS, timeout=15)
         soup = BeautifulSoup(r.text, "html.parser")
-        entries = soup.select("ul.list-unstyled li") or soup.select(".lcds-list li")
-        for entry in entries[:20]:
-            a = entry.find("a")
-            if not a:
-                continue
+        main = soup.find("main") or soup.find(id="main-content")
+        if not main:
+            return items
+        for a in main.find_all("a", href=True):
             title = clean_text(a.get_text())
-            href = a.get("href", "")
+            href = a["href"]
+            if len(title) < 20:
+                continue
+            if any(ex in href for ex in exclude_url_kws):
+                continue
+            url_match = any(kw in href.lower() for kw in ai_url_kws)
+            title_match = any(kw in title.lower() for kw in ai_title_kws)
+            if not (url_match or title_match):
+                continue
             if not href.startswith("http"):
                 href = "https://www.fda.gov" + href
-            date_span = entry.find("span", class_=lambda x: x and "date" in x.lower())
-            date_pub = clean_text(date_span.get_text()) if date_span else None
+            if href in seen_urls:
+                continue
+            seen_urls.add(href)
             items.append({
                 "source_name": "FDA Digital Health",
                 "source_url": href,
                 "title": title,
-                "date_published": date_pub,
                 "raw_text": title
             })
     except Exception as e:
         print(f"  [!] FDA Digital Health error: {e}")
-    return items
+    return items[:10]
 
 
 def scrape_fda_ai_ml_action_plan():
@@ -122,32 +143,45 @@ def scrape_onc_news():
     """
     ONC (Office of National Coordinator) — HTI rulemaking, AI certification,
     interoperability, CDS transparency requirements.
-    Key items: HTI-5 proposed rule (removes AI model card requirements),
-    HTI-2 withdrawal.
+    Scrapes healthit.gov/news/ links embedded in the ONC news page
+    (the listing itself is JS-rendered, but news item hrefs appear in static HTML).
     """
+    import re as _re
     items = []
-    url = "https://www.healthit.gov/newsroom/news-updates"
+    url = "https://healthit.gov/news/"
+    seen = set()
     try:
         r = requests.get(url, headers=HEADERS, timeout=15)
         soup = BeautifulSoup(r.text, "html.parser")
-        for article in soup.select("article, .views-row, .field-content"):
-            a = article.find("a")
-            if not a:
-                continue
-            title = clean_text(a.get_text())
-            if len(title) < 15:
-                continue
+        for a in soup.select("a[href]"):
             href = a.get("href", "")
-            if not href.startswith("http"):
-                href = "https://www.healthit.gov" + href
-            date_el = article.find("time") or article.find(class_=lambda x: x and "date" in str(x))
-            date_pub = date_el.get_text() if date_el else None
+            # Keep only actual news article URLs (not the news index itself)
+            if "healthit.gov/news/" not in href and not (
+                href.startswith("/news/") and len(href) > 7
+            ):
+                continue
+            title_raw = clean_text(a.get_text())
+            if len(title_raw) < 15:
+                continue
+            if href.startswith("/"):
+                href = "https://healthit.gov" + href
+            if href in seen:
+                continue
+            seen.add(href)
+            # Some links embed date at start: "June 25, 2026Title text..."
+            date_pub = None
+            date_match = _re.match(r"^([A-Z][a-z]+ \d+, \d{4})(.*)", title_raw)
+            if date_match:
+                date_pub = date_match.group(1)
+                title_raw = clean_text(date_match.group(2))
+            if len(title_raw) < 10:
+                continue
             items.append({
                 "source_name": "ONC/HealthIT.gov",
                 "source_url": href,
-                "title": title,
-                "date_published": clean_text(date_pub) if date_pub else None,
-                "raw_text": title
+                "title": title_raw,
+                "date_published": date_pub,
+                "raw_text": title_raw
             })
     except Exception as e:
         print(f"  [!] ONC error: {e}")
@@ -231,40 +265,40 @@ def scrape_hhs_news():
 
 def scrape_ncsl_health_ai():
     """
-    NCSL (National Conference of State Legislatures) — tracks state AI legislation.
-    Best public aggregator of state health AI bills.
+    Google News: state health AI legislation — replaces the defunct NCSL tracker.
+    Covers enacted and proposed state bills on AI in healthcare, chatbots,
+    prior auth, mental health AI, clinical decision support, regulatory sandboxes.
     """
     items = []
-    url = "https://www.ncsl.org/technology-and-communication/artificial-intelligence/ai-legislative-tracker-2024"
+    feed_url = (
+        "https://news.google.com/rss/search"
+        "?q=health+AI+legislation+state+bill+regulation&hl=en-US&gl=US&ceid=US:en"
+    )
+    health_kws = ["health", "medical", "clinical", "patient", "hospital", "insurance",
+                  "prior auth", "chatbot", "mental health", "prescri", "medicare",
+                  "medicaid", "physician", "provider", "hipaa", "digital health"]
     try:
-        r = requests.get(url, headers=HEADERS, timeout=15)
-        soup = BeautifulSoup(r.text, "html.parser")
-        # NCSL uses tables for legislation tracking
-        for row in soup.select("table tr"):
-            cells = row.find_all("td")
-            if len(cells) >= 3:
-                bill_cell = cells[0] if cells else None
-                desc_cell = cells[2] if len(cells) > 2 else None
-                a = bill_cell.find("a") if bill_cell else None
-                if not a:
-                    continue
-                title = clean_text(a.get_text())
-                desc = clean_text(desc_cell.get_text()) if desc_cell else ""
-                health_keywords = ["health", "medical", "clinical", "patient",
-                                  "hipaa", "provider", "insurance", "prior auth",
-                                  "chatbot", "mental health", "prescri"]
-                if not any(kw in desc.lower() or kw in title.lower()
-                          for kw in health_keywords):
-                    continue
-                items.append({
-                    "source_name": "NCSL State AI Tracker",
-                    "source_url": a.get("href", url),
-                    "title": title,
-                    "raw_text": clean_text(f"{title}. {desc}")
-                })
+        feed = feedparser.parse(feed_url)
+        for entry in feed.entries[:40]:
+            title_raw = entry.get("title", "")
+            # Strip " - Source Name" suffix Google News appends
+            title = title_raw.rsplit(" - ", 1)[0].strip() if " - " in title_raw else title_raw
+            title = clean_text(title).rstrip(" -").strip()
+            summary = clean_text(entry.get("summary", ""))
+            if not any(kw in (title + summary).lower() for kw in health_kws):
+                continue
+            if len(title) < 20:
+                continue
+            items.append({
+                "source_name": "State Health AI News",
+                "source_url": entry.get("link", ""),
+                "title": title,
+                "date_published": entry.get("published", ""),
+                "raw_text": clean_text(f"{title}. {summary}")
+            })
     except Exception as e:
-        print(f"  [!] NCSL error: {e}")
-    return items[:25]
+        print(f"  [!] State Health AI News error: {e}")
+    return items[:20]
 
 
 def scrape_california_leginfo():
@@ -383,34 +417,40 @@ def scrape_stat_health_ai():
 
 def scrape_manatt_health():
     """
-    Manatt Health publications — the gold-standard tracker for health AI policy
-    (the Manatt Health AI Policy Tracker PDF is the reference document for this project).
-    Scrapes their insights/publications page for new releases.
+    Google News: federal health AI policy and governance — replaces the defunct
+    Manatt Health newsletters URL. Covers FDA/CMS/ONC/HHS AI guidance,
+    federal AI governance frameworks, health AI regulation and enforcement.
     """
     items = []
-    url = "https://www.manatt.com/insights/newsletters/health-highlights"
+    feed_url = (
+        "https://news.google.com/rss/search"
+        "?q=health+AI+policy+FDA+CMS+ONC+HHS+governance+regulation&hl=en-US&gl=US&ceid=US:en"
+    )
+    federal_kws = ["fda", "cms", "onc", "hhs", "nih", "federal", "agency", "guidance",
+                   "rule", "regulation", "policy", "governance", "framework",
+                   "artificial intelligence", "machine learning", "algorithm",
+                   "prior auth", "clinical decision", "digital health", "ai "]
     try:
-        r = requests.get(url, headers=HEADERS, timeout=15)
-        soup = BeautifulSoup(r.text, "html.parser")
-        for a in soup.select("article a, .insights-list a, h2 a, h3 a"):
-            title = clean_text(a.get_text())
+        feed = feedparser.parse(feed_url)
+        for entry in feed.entries[:40]:
+            title_raw = entry.get("title", "")
+            title = title_raw.rsplit(" - ", 1)[0].strip() if " - " in title_raw else title_raw
+            title = clean_text(title).rstrip(" -").strip()
+            summary = clean_text(entry.get("summary", ""))
+            if not any(kw.lower() in (title + summary).lower() for kw in federal_kws):
+                continue
             if len(title) < 20:
                 continue
-            href = a.get("href", "")
-            if not href.startswith("http"):
-                href = "https://www.manatt.com" + href
-            if not any(kw in title.lower() for kw in
-                      ["ai", "health", "digital", "policy", "regulation"]):
-                continue
             items.append({
-                "source_name": "Manatt Health",
-                "source_url": href,
+                "source_name": "Federal Health AI News",
+                "source_url": entry.get("link", ""),
                 "title": title,
-                "raw_text": title
+                "date_published": entry.get("published", ""),
+                "raw_text": clean_text(f"{title}. {summary}")
             })
     except Exception as e:
-        print(f"  [!] Manatt Health error: {e}")
-    return items[:10]
+        print(f"  [!] Federal Health AI News error: {e}")
+    return items[:20]
 
 
 def scrape_aha_news():
@@ -444,30 +484,49 @@ def scrape_aha_news():
 
 def scrape_nist_ai():
     """
-    NIST AI Risk Management Framework updates and publications.
-    Covers: AI RMF 1.0 profiles, health sector guidance, trustworthy AI principles.
+    NIST AI news updates — AI RMF profiles, trustworthy AI research,
+    health sector AI evaluations (CAISI), AI consortium, bias and safety.
+    Uses the NIST news page filtered to the AI topic (topic 2753736).
     """
     items = []
-    url = "https://airc.nist.gov/Updates"
+    url = "https://www.nist.gov/news-events/news-updates/topic/2753736"
+    health_ai_kws = [
+        "health", "medical", "clinical", "patient", "drug", "hospital", "care",
+        "fda", "cms", "hipaa", "ai rmf", "risk management", "trustworth",
+        "bias", "safety", "evaluation", "benchmark", "caisi", "consortium",
+        "algorithm", "machine learning", "artificial intelligence", "generative"
+    ]
     try:
         r = requests.get(url, headers=HEADERS, timeout=15)
         soup = BeautifulSoup(r.text, "html.parser")
-        for a in soup.select("a[href]"):
+        for art in soup.select("article"):
+            h3 = art.find("h3")
+            a = h3.find("a") if h3 else None
+            if not a:
+                continue
             title = clean_text(a.get_text())
-            if len(title) < 20 or len(title) > 300:
+            if len(title) < 15:
                 continue
             href = a["href"]
             if not href.startswith("http"):
-                href = "https://airc.nist.gov" + href
+                href = "https://www.nist.gov" + href
+            t = art.find("time")
+            date_pub = t.get("datetime", "")[:10] if t else None
+            if not any(kw in title.lower() for kw in health_ai_kws):
+                continue
+            # Skip job postings
+            if any(skip in title.lower() for skip in ["usajobs", "position for", "we are hiring"]):
+                continue
             items.append({
-                "source_name": "NIST AI RMF",
+                "source_name": "NIST AI",
                 "source_url": href,
                 "title": title,
+                "date_published": date_pub,
                 "raw_text": title
             })
     except Exception as e:
         print(f"  [!] NIST AI error: {e}")
-    return items[:10]
+    return items[:15]
 
 
 # ──────────────────────────────────────────────
