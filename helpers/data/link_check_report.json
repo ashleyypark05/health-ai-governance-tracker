@@ -1,13 +1,91 @@
 {
-  "checked_at": "2026-06-16T22:11:48.680507Z",
-  "checked": 51,
-  "migrated": 3,
+  "checked_at": "2026-06-17T14:27:21.552945Z",
+  "checked": 108,
+  "migrated": 39,
   "broken": [
     {
-      "id": 45,
-      "url": "https://www.commerce.gov/vulnerability-disclosure-policy",
+      "id": 1,
+      "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software",
+      "status": 404,
+      "archive_url": "http://web.archive.org/web/20260507202344/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software"
+    },
+    {
+      "id": 2,
+      "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices",
+      "status": 404,
+      "archive_url": "http://web.archive.org/web/20260507202149/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices"
+    },
+    {
+      "id": 3,
+      "url": "https://www.fda.gov/about-fda/artificial-intelligence-drug-development/guiding-principles-good-ai-practice-drug-development",
+      "status": 404,
+      "archive_url": "http://web.archive.org/web/20260507112420/https://www.fda.gov/about-fda/artificial-intelligence-drug-development/guiding-principles-good-ai-practice-drug-development"
+    },
+    {
+      "id": 4,
+      "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions",
+      "status": 404,
+      "archive_url": null
+    },
+    {
+      "id": 6,
+      "url": "https://sam.gov/workspace/contract/opp/570eab65b31b4c93b556185df473266c/view",
       "status": 403,
-      "archive_url": "http://web.archive.org/web/20260512000210/https://www.commerce.gov/vulnerability-disclosure-policy"
+      "archive_url": "http://web.archive.org/web/20260507113551/https://sam.gov/workspace/contract/opp/570eab65b31b4c93b556185df473266c/view"
+    },
+    {
+      "id": 7,
+      "url": "https://www.federalregister.gov/documents/2026/02/27/2026-03968/request-for-information-rfi-related-to-comprehensive-regulations-to-uncover-suspicious-healthcare",
+      "status": 403,
+      "archive_url": null
+    },
+    {
+      "id": 9,
+      "url": "https://www.federalregister.gov/documents/2025/12/29/2025-23890/health-data-technology-and-interoperability-patient-engagement-information-sharing-and-public-health",
+      "status": 403,
+      "archive_url": "http://web.archive.org/web/20251226001150/https://www.federalregister.gov/documents/2025/12/29/2025-23890/health-data-technology-and-interoperability-patient-engagement-information-sharing-and-public-health"
+    },
+    {
+      "id": 10,
+      "url": "https://www.federalregister.gov/documents/2025/12/23/2025-23641/request-for-information-accelerating-the-adoption-and-use-of-artificial-intelligence-as-part-of",
+      "status": 403,
+      "archive_url": "http://web.archive.org/web/20260119042057/https://www.federalregister.gov/documents/2025/12/23/2025-23641/request-for-information-accelerating-the-adoption-and-use-of-artificial-intelligence-as-part-of"
+    },
+    {
+      "id": 52,
+      "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/request-public-comment-measuring-and-evaluating-artificial-intelligence-enabled-medical-device",
+      "status": 404,
+      "archive_url": null
+    },
+    {
+      "id": 53,
+      "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd",
+      "status": 404,
+      "archive_url": "http://web.archive.org/web/20260521083557/https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd?"
+    },
+    {
+      "id": 54,
+      "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/marketing-submission-recommendations-predetermined-change-control-plan-artificial",
+      "status": 404,
+      "archive_url": "http://web.archive.org/web/20241109044806/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/marketing-submission-recommendations-predetermined-change-control-plan-artificial"
+    },
+    {
+      "id": 55,
+      "url": "https://www.fda.gov/science-research/artificial-intelligence-and-medical-products/fda-digital-health-and-artificial-intelligence-glossary-educational-resource",
+      "status": 404,
+      "archive_url": "http://web.archive.org/web/20260430040137/https://www.fda.gov/science-research/artificial-intelligence-and-medical-products/fda-digital-health-and-artificial-intelligence-glossary-educational-resource"
+    },
+    {
+      "id": 56,
+      "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/artificial-intelligence-enabled-device-software-functions-lifecycle-management-and-marketing",
+      "status": 404,
+      "archive_url": "http://web.archive.org/web/20260212224959/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/artificial-intelligence-enabled-device-software-functions-lifecycle-management-and-marketing"
+    },
+    {
+      "id": 57,
+      "url": "https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-software-medical-device",
+      "status": 404,
+      "archive_url": "http://web.archive.org/web/20260610044609/https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-software-medical-device"
     }
   ],
   "blocked": [
