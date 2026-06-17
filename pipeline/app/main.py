@@ -42,21 +42,17 @@ def load_link_issues():
     except (FileNotFoundError, json.JSONDecodeError):
         return {}
 
-@st.cache_resource
-def get_conn():
-    if not os.path.exists(DB_PATH): return None
-    c = sqlite3.connect(DB_PATH, check_same_thread=False)
-    c.row_factory = sqlite3.Row
-    return c
-
 @st.cache_data(ttl=300)
 def load_data():
-    c = get_conn()
-    if not c: return pd.DataFrame()
-    return pd.read_sql_query("""SELECT id,source_name,source_url,title,date_published,
-        summary,domain_tag,action_tag,stakeholder_tag,relevance_amc,relevance_payer,
-        relevance_dh,date_scraped FROM developments WHERE summary IS NOT NULL
-        ORDER BY date_published DESC,date_scraped DESC""", c)
+    if not os.path.exists(DB_PATH): return pd.DataFrame()
+    conn = sqlite3.connect(DB_PATH)
+    try:
+        return pd.read_sql_query("""SELECT id,source_name,source_url,title,date_published,
+            summary,domain_tag,action_tag,stakeholder_tag,relevance_amc,relevance_payer,
+            relevance_dh,date_scraped FROM developments WHERE summary IS NOT NULL
+            ORDER BY date_published DESC,date_scraped DESC""", conn)
+    finally:
+        conn.close()
 
 DL = DOMAIN_LABELS
 DC = {"clinical_care":"var(--dom-teal)","payor_utilization":"var(--dom-champagne)","transparency_consent":"var(--dom-sky)",
@@ -908,12 +904,13 @@ button[kind="primary"],button[kind="primaryFormSubmit"]{color:var(--navy)!import
             occ = st.selectbox("I work in", ["Select your occupation","Health system / Academic medical center","Digital health / AI company","Health plan / Payer","Policy / Government","Research / Academia","Consulting / Law","Other"])
             if st.form_submit_button("Subscribe to monthly digest →", type="primary"):
                 if fn and ln and em and "@" in em and occ!="Select your occupation":
-                    cn = get_conn()
-                    if cn:
+                    if os.path.exists(DB_PATH):
                         try:
+                            cn = sqlite3.connect(DB_PATH)
                             cn.execute("CREATE TABLE IF NOT EXISTS subscribers (id INTEGER PRIMARY KEY, first_name TEXT, last_name TEXT, email TEXT UNIQUE, occupation TEXT, subscribed_at TEXT)")
                             cn.execute("INSERT OR IGNORE INTO subscribers (first_name,last_name,email,occupation,subscribed_at) VALUES (?,?,?,?,?)",(fn,ln,em,occ,now.isoformat()))
                             cn.commit()
+                            cn.close()
                         except: pass
                     if BK and BP:
                         try: http_requests.post(f"https://api.beehiiv.com/v2/publications/{BP}/subscriptions",headers={"Authorization":f"Bearer {BK}","Content-Type":"application/json"},json={"email":em,"first_name":fn,"last_name":ln,"reactivate_existing":False,"send_welcome_email":True,"tags":[occ],"custom_fields":[{"name":"Occupation","value":occ}]},timeout=5)
