@@ -22,12 +22,12 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run scrapers
-        run: python helpers/scrapers.py
+        run: python helpers/scrapers.py | tee scrape_output.txt
 
       - name: Summarize + tag new developments
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: python content/summarize.py
+        run: python content/summarize.py | tee summarize_output.txt
 
       - name: Commit updated database
         run: |
@@ -36,3 +36,28 @@ jobs:
           git add helpers/data/tracker.db helpers/data/link_check_report.json
           git diff --staged --quiet || git commit -m "chore: daily scrape + summarize $(date -u +%Y-%m-%d)"
           git push
+
+      - name: Post daily summary
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          DATE=$(date -u +'%Y-%m-%d')
+          NEW=$(grep -oP '\d+(?= new developments added)' scrape_output.txt 2>/dev/null || echo "0")
+          TOTAL=$(grep -oP '(?<=Total: )\d+' scrape_output.txt 2>/dev/null | tail -1 || echo "?")
+          SUMMARIZED=$(grep -oP '\d+(?= succeeded)' summarize_output.txt 2>/dev/null | head -1 || echo "0")
+
+          # Always write to the Actions step summary (visible in the UI, no email)
+          printf '## Pulse daily pipeline — %s\n\n| | |\n|---|---|\n| New developments | **%s** |\n| Total in tracker | **%s** |\n| Summarized | **%s** |\n\n[View full run](%s)\n' \
+            "$DATE" "$NEW" "$TOTAL" "$SUMMARIZED" "$RUN_URL" >> "$GITHUB_STEP_SUMMARY"
+
+          # Only create an issue (→ email) when new items were actually added
+          if [ "$NEW" != "0" ] && [ "$NEW" != "" ]; then
+            printf '**%s new developments** added on %s — tracker now at %s total.\n\nSummarized: %s items.\n\n[View run →](%s)\n' \
+              "$NEW" "$DATE" "$TOTAL" "$SUMMARIZED" "$RUN_URL" > daily_body.md
+            gh issue create \
+              --title "Daily pipeline: +$NEW developments ($DATE)" \
+              --assignee ashleyypark05 \
+              --body-file daily_body.md
+          fi
