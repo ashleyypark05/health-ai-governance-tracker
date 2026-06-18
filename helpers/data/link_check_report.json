@@ -1,19 +1,19 @@
 {
-  "checked_at": "2026-06-17T14:27:21.552945Z",
-  "checked": 108,
-  "migrated": 39,
+  "checked_at": "2026-06-18T14:10:55.159511Z",
+  "checked": 142,
+  "migrated": 34,
   "broken": [
     {
       "id": 1,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260507202344/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software"
+      "archive_url": null
     },
     {
       "id": 2,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260507202149/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices"
+      "archive_url": null
     },
     {
       "id": 3,
@@ -25,31 +25,7 @@
       "id": 4,
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions",
       "status": 404,
-      "archive_url": null
-    },
-    {
-      "id": 6,
-      "url": "https://sam.gov/workspace/contract/opp/570eab65b31b4c93b556185df473266c/view",
-      "status": 403,
-      "archive_url": "http://web.archive.org/web/20260507113551/https://sam.gov/workspace/contract/opp/570eab65b31b4c93b556185df473266c/view"
-    },
-    {
-      "id": 7,
-      "url": "https://www.federalregister.gov/documents/2026/02/27/2026-03968/request-for-information-rfi-related-to-comprehensive-regulations-to-uncover-suspicious-healthcare",
-      "status": 403,
-      "archive_url": null
-    },
-    {
-      "id": 9,
-      "url": "https://www.federalregister.gov/documents/2025/12/29/2025-23890/health-data-technology-and-interoperability-patient-engagement-information-sharing-and-public-health",
-      "status": 403,
-      "archive_url": "http://web.archive.org/web/20251226001150/https://www.federalregister.gov/documents/2025/12/29/2025-23890/health-data-technology-and-interoperability-patient-engagement-information-sharing-and-public-health"
-    },
-    {
-      "id": 10,
-      "url": "https://www.federalregister.gov/documents/2025/12/23/2025-23641/request-for-information-accelerating-the-adoption-and-use-of-artificial-intelligence-as-part-of",
-      "status": 403,
-      "archive_url": "http://web.archive.org/web/20260119042057/https://www.federalregister.gov/documents/2025/12/23/2025-23641/request-for-information-accelerating-the-adoption-and-use-of-artificial-intelligence-as-part-of"
+      "archive_url": "http://web.archive.org/web/20260521213713/https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions"
     },
     {
       "id": 52,
