@@ -1,7 +1,7 @@
 {
-  "checked_at": "2026-06-20T12:27:24.053988Z",
-  "checked": 150,
-  "migrated": 3,
+  "checked_at": "2026-06-21T13:05:20.834332Z",
+  "checked": 155,
+  "migrated": 8,
   "broken": [
     {
       "id": 1,
@@ -13,7 +13,7 @@
       "id": 2,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260618185445/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices"
+      "archive_url": "http://web.archive.org/web/20260620115546/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices"
     },
     {
       "id": 3,
@@ -28,22 +28,10 @@
       "archive_url": "http://web.archive.org/web/20260521213713/https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions"
     },
     {
-      "id": 9,
-      "url": "https://www.federalregister.gov/documents/2025/12/29/2025-23890/health-data-technology-and-interoperability-patient-engagement-information-sharing-and-public-health",
-      "status": 500,
-      "archive_url": "http://web.archive.org/web/20251226001150/https://www.federalregister.gov/documents/2025/12/29/2025-23890/health-data-technology-and-interoperability-patient-engagement-information-sharing-and-public-health"
-    },
-    {
-      "id": 24,
-      "url": "https://nyassembly.gov/leg/?bn=AB8884",
-      "status": "HTTPSConnectionPool(host='nyassembly.gov', port=443): Max retries exceeded with url: /leg/?bn=AB8884 (Caused by ConnectTimeoutError(<HTTPSConnection(host='nyassembly.gov', port=443) at 0x7f41d0adf190>, 'Connection to nyassembly.gov timed out. (connect timeout=15)'))",
-      "archive_url": null
-    },
-    {
       "id": 52,
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/request-public-comment-measuring-and-evaluating-artificial-intelligence-enabled-medical-device",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260212225004/https://www.fda.gov/medical-devices/digital-health-center-excellence/request-public-comment-measuring-and-evaluating-artificial-intelligence-enabled-medical-device"
+      "archive_url": null
     },
     {
       "id": 53,
@@ -67,7 +55,7 @@
       "id": 56,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/artificial-intelligence-enabled-device-software-functions-lifecycle-management-and-marketing",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260212224959/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/artificial-intelligence-enabled-device-software-functions-lifecycle-management-and-marketing"
+      "archive_url": null
     },
     {
       "id": 57,
@@ -80,7 +68,7 @@
     {
       "id": 15,
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/7757",
-      "archive_url": "http://web.archive.org/web/20260507113628/https://www.congress.gov/bill/119th-congress/house-bill/7757"
+      "archive_url": null
     }
   ]
 }
