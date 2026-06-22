@@ -1,7 +1,7 @@
 {
-  "checked_at": "2026-06-21T13:05:20.834332Z",
-  "checked": 155,
-  "migrated": 8,
+  "checked_at": "2026-06-22T15:51:36.051397Z",
+  "checked": 162,
+  "migrated": 10,
   "broken": [
     {
       "id": 1,
@@ -31,7 +31,7 @@
       "id": 52,
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/request-public-comment-measuring-and-evaluating-artificial-intelligence-enabled-medical-device",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260212225004/https://www.fda.gov/medical-devices/digital-health-center-excellence/request-public-comment-measuring-and-evaluating-artificial-intelligence-enabled-medical-device"
     },
     {
       "id": 53,
@@ -43,13 +43,13 @@
       "id": 54,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/marketing-submission-recommendations-predetermined-change-control-plan-artificial",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20241109044806/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/marketing-submission-recommendations-predetermined-change-control-plan-artificial"
+      "archive_url": null
     },
     {
       "id": 55,
       "url": "https://www.fda.gov/science-research/artificial-intelligence-and-medical-products/fda-digital-health-and-artificial-intelligence-glossary-educational-resource",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260430040137/https://www.fda.gov/science-research/artificial-intelligence-and-medical-products/fda-digital-health-and-artificial-intelligence-glossary-educational-resource"
+      "archive_url": null
     },
     {
       "id": 56,
@@ -68,7 +68,7 @@
     {
       "id": 15,
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/7757",
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260507113628/https://www.congress.gov/bill/119th-congress/house-bill/7757"
     }
   ]
 }
