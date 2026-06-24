@@ -1,7 +1,7 @@
 {
-  "checked_at": "2026-06-23T13:43:40.028665Z",
-  "checked": 167,
-  "migrated": 3,
+  "checked_at": "2026-06-24T13:22:04.622150Z",
+  "checked": 173,
+  "migrated": 4,
   "broken": [
     {
       "id": 1,
@@ -13,7 +13,7 @@
       "id": 2,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260620115546/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices"
+      "archive_url": null
     },
     {
       "id": 3,
@@ -25,7 +25,7 @@
       "id": 4,
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260521213713/https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions"
+      "archive_url": null
     },
     {
       "id": 52,
@@ -49,7 +49,7 @@
       "id": 55,
       "url": "https://www.fda.gov/science-research/artificial-intelligence-and-medical-products/fda-digital-health-and-artificial-intelligence-glossary-educational-resource",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260430040137/https://www.fda.gov/science-research/artificial-intelligence-and-medical-products/fda-digital-health-and-artificial-intelligence-glossary-educational-resource"
+      "archive_url": null
     },
     {
       "id": 56,
@@ -61,7 +61,7 @@
       "id": 57,
       "url": "https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-software-medical-device",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260618065258/https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-software-medical-device"
+      "archive_url": "http://web.archive.org/web/20260623160640/https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-software-medical-device"
     }
   ],
   "blocked": [
