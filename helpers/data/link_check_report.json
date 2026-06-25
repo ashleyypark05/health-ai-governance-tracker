@@ -1,19 +1,19 @@
 {
-  "checked_at": "2026-06-24T13:22:04.622150Z",
-  "checked": 173,
-  "migrated": 4,
+  "checked_at": "2026-06-25T13:15:37.087752Z",
+  "checked": 176,
+  "migrated": 0,
   "broken": [
     {
       "id": 1,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260507202344/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software"
+      "archive_url": null
     },
     {
       "id": 2,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260620115546/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices"
     },
     {
       "id": 3,
@@ -25,7 +25,13 @@
       "id": 4,
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260521213713/https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions"
+    },
+    {
+      "id": 30,
+      "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149",
+      "status": "HTTPSConnectionPool(host='capitol.texas.gov', port=443): Max retries exceeded with url: /BillLookup/History.aspx?LegSess=89R&Bill=HB149 (Caused by NewConnectionError(\"HTTPSConnection(host='capitol.texas.gov', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))",
+      "archive_url": "http://web.archive.org/web/20260529122517/https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149"
     },
     {
       "id": 52,
@@ -49,19 +55,19 @@
       "id": 55,
       "url": "https://www.fda.gov/science-research/artificial-intelligence-and-medical-products/fda-digital-health-and-artificial-intelligence-glossary-educational-resource",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260430040137/https://www.fda.gov/science-research/artificial-intelligence-and-medical-products/fda-digital-health-and-artificial-intelligence-glossary-educational-resource"
     },
     {
       "id": 56,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/artificial-intelligence-enabled-device-software-functions-lifecycle-management-and-marketing",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260212224959/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/artificial-intelligence-enabled-device-software-functions-lifecycle-management-and-marketing"
+      "archive_url": null
     },
     {
       "id": 57,
       "url": "https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-software-medical-device",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260623160640/https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-software-medical-device"
+      "archive_url": null
     }
   ],
   "blocked": [
