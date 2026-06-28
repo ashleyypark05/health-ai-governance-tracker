@@ -1,13 +1,13 @@
 {
-  "checked_at": "2026-06-27T12:09:12.196033Z",
+  "checked_at": "2026-06-28T12:16:27.552888Z",
   "checked": 180,
-  "migrated": 2,
+  "migrated": 0,
   "broken": [
     {
       "id": 1,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260507202344/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software"
     },
     {
       "id": 2,
@@ -28,10 +28,22 @@
       "archive_url": "http://web.archive.org/web/20260521213713/https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions"
     },
     {
+      "id": 19,
+      "url": "https://legislature.idaho.gov/sessioninfo/2026/legislation/S1297/",
+      "status": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+      "archive_url": "http://web.archive.org/web/20260325220832/https://legislature.idaho.gov/sessioninfo/2026/legislation/S1297/"
+    },
+    {
+      "id": 30,
+      "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149",
+      "status": "HTTPSConnectionPool(host='capitol.texas.gov', port=443): Max retries exceeded with url: /BillLookup/History.aspx?LegSess=89R&Bill=HB149 (Caused by NewConnectionError(\"HTTPSConnection(host='capitol.texas.gov', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))",
+      "archive_url": "http://web.archive.org/web/20260529122517/https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149"
+    },
+    {
       "id": 52,
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/request-public-comment-measuring-and-evaluating-artificial-intelligence-enabled-medical-device",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260415225828/https://www.fda.gov/medical-devices/digital-health-center-excellence/request-public-comment-measuring-and-evaluating-artificial-intelligence-enabled-medical-device"
+      "archive_url": null
     },
     {
       "id": 53,
@@ -61,7 +73,7 @@
       "id": 57,
       "url": "https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-software-medical-device",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260623160640/https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-software-medical-device"
+      "archive_url": null
     }
   ],
   "blocked": [
