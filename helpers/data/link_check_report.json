@@ -1,7 +1,7 @@
 {
-  "checked_at": "2026-06-29T14:48:20.755923Z",
-  "checked": 180,
-  "migrated": 0,
+  "checked_at": "2026-06-30T13:10:57.723941Z",
+  "checked": 181,
+  "migrated": 1,
   "broken": [
     {
       "id": 1,
@@ -13,7 +13,7 @@
       "id": 2,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260620115546/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices"
+      "archive_url": null
     },
     {
       "id": 3,
@@ -34,6 +34,18 @@
       "archive_url": "http://web.archive.org/web/20260325220832/https://legislature.idaho.gov/sessioninfo/2026/legislation/S1297/"
     },
     {
+      "id": 27,
+      "url": "https://commerce.utah.gov/ai/regulatory-relief/authorized-ai-pilots/ai-legion-health/",
+      "status": 403,
+      "archive_url": null
+    },
+    {
+      "id": 30,
+      "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149",
+      "status": "HTTPSConnectionPool(host='capitol.texas.gov', port=443): Read timed out. (read timeout=15)",
+      "archive_url": "http://web.archive.org/web/20260529122517/https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149"
+    },
+    {
       "id": 52,
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/request-public-comment-measuring-and-evaluating-artificial-intelligence-enabled-medical-device",
       "status": 404,
@@ -43,7 +55,7 @@
       "id": 53,
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260521083557/https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd?"
+      "archive_url": null
     },
     {
       "id": 54,
@@ -67,14 +79,14 @@
       "id": 57,
       "url": "https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-software-medical-device",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260623160640/https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-software-medical-device"
+      "archive_url": null
     }
   ],
   "blocked": [
     {
       "id": 15,
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/7757",
-      "archive_url": "http://web.archive.org/web/20260507113628/https://www.congress.gov/bill/119th-congress/house-bill/7757"
+      "archive_url": null
     }
   ]
 }
