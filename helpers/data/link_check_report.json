@@ -1,7 +1,7 @@
 {
-  "checked_at": "2026-06-30T13:10:57.723941Z",
-  "checked": 181,
-  "migrated": 1,
+  "checked_at": "2026-07-01T13:33:54.590176Z",
+  "checked": 186,
+  "migrated": 3,
   "broken": [
     {
       "id": 1,
@@ -13,7 +13,7 @@
       "id": 2,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260620115546/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices"
     },
     {
       "id": 3,
@@ -28,22 +28,10 @@
       "archive_url": "http://web.archive.org/web/20260521213713/https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions"
     },
     {
-      "id": 19,
-      "url": "https://legislature.idaho.gov/sessioninfo/2026/legislation/S1297/",
-      "status": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
-      "archive_url": "http://web.archive.org/web/20260325220832/https://legislature.idaho.gov/sessioninfo/2026/legislation/S1297/"
-    },
-    {
       "id": 27,
       "url": "https://commerce.utah.gov/ai/regulatory-relief/authorized-ai-pilots/ai-legion-health/",
       "status": 403,
-      "archive_url": null
-    },
-    {
-      "id": 30,
-      "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149",
-      "status": "HTTPSConnectionPool(host='capitol.texas.gov', port=443): Read timed out. (read timeout=15)",
-      "archive_url": "http://web.archive.org/web/20260529122517/https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149"
+      "archive_url": "http://web.archive.org/web/20260625193730/https://commerce.utah.gov/ai/regulatory-relief/authorized-ai-pilots/ai-legion-health/"
     },
     {
       "id": 52,
@@ -55,7 +43,7 @@
       "id": 53,
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260521083557/https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd?"
     },
     {
       "id": 54,
@@ -67,7 +55,7 @@
       "id": 55,
       "url": "https://www.fda.gov/science-research/artificial-intelligence-and-medical-products/fda-digital-health-and-artificial-intelligence-glossary-educational-resource",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260430040137/https://www.fda.gov/science-research/artificial-intelligence-and-medical-products/fda-digital-health-and-artificial-intelligence-glossary-educational-resource"
     },
     {
       "id": 56,
@@ -79,14 +67,14 @@
       "id": 57,
       "url": "https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-software-medical-device",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260623160640/https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-software-medical-device"
     }
   ],
   "blocked": [
     {
       "id": 15,
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/7757",
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260630155420/https://www.congress.gov/bill/119th-congress/house-bill/7757"
     }
   ]
 }
