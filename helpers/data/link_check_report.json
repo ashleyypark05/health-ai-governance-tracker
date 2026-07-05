@@ -1,25 +1,25 @@
 {
-  "checked_at": "2026-07-04T12:07:00.307789Z",
-  "checked": 201,
-  "migrated": 4,
+  "checked_at": "2026-07-05T12:15:28.945238Z",
+  "checked": 206,
+  "migrated": 5,
   "broken": [
     {
       "id": 1,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260507202344/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software"
     },
     {
       "id": 2,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260620115546/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices"
+      "archive_url": null
     },
     {
       "id": 3,
       "url": "https://www.fda.gov/about-fda/artificial-intelligence-drug-development/guiding-principles-good-ai-practice-drug-development",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260507112420/https://www.fda.gov/about-fda/artificial-intelligence-drug-development/guiding-principles-good-ai-practice-drug-development"
     },
     {
       "id": 4,
@@ -31,7 +31,7 @@
       "id": 52,
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/request-public-comment-measuring-and-evaluating-artificial-intelligence-enabled-medical-device",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260415225828/https://www.fda.gov/medical-devices/digital-health-center-excellence/request-public-comment-measuring-and-evaluating-artificial-intelligence-enabled-medical-device"
     },
     {
       "id": 53,
@@ -43,7 +43,7 @@
       "id": 54,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/marketing-submission-recommendations-predetermined-change-control-plan-artificial",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20241109044806/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/marketing-submission-recommendations-predetermined-change-control-plan-artificial"
     },
     {
       "id": 55,
@@ -55,7 +55,7 @@
       "id": 56,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/artificial-intelligence-enabled-device-software-functions-lifecycle-management-and-marketing",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260212224959/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/artificial-intelligence-enabled-device-software-functions-lifecycle-management-and-marketing"
+      "archive_url": null
     },
     {
       "id": 57,
