@@ -1,19 +1,19 @@
 {
-  "checked_at": "2026-07-05T12:15:28.945238Z",
-  "checked": 206,
-  "migrated": 5,
+  "checked_at": "2026-07-06T14:24:15.266243Z",
+  "checked": 207,
+  "migrated": 1,
   "broken": [
     {
       "id": 1,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260507202344/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software"
+      "archive_url": null
     },
     {
       "id": 2,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260620115546/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices"
     },
     {
       "id": 3,
@@ -31,7 +31,7 @@
       "id": 52,
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/request-public-comment-measuring-and-evaluating-artificial-intelligence-enabled-medical-device",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260415225828/https://www.fda.gov/medical-devices/digital-health-center-excellence/request-public-comment-measuring-and-evaluating-artificial-intelligence-enabled-medical-device"
+      "archive_url": null
     },
     {
       "id": 53,
@@ -55,7 +55,7 @@
       "id": 56,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/artificial-intelligence-enabled-device-software-functions-lifecycle-management-and-marketing",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260212224959/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/artificial-intelligence-enabled-device-software-functions-lifecycle-management-and-marketing"
     },
     {
       "id": 57,
