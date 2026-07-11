@@ -1,13 +1,13 @@
 {
-  "checked_at": "2026-07-10T13:11:29.883247Z",
+  "checked_at": "2026-07-11T11:52:01.135747Z",
   "checked": 214,
-  "migrated": 2,
+  "migrated": 0,
   "broken": [
     {
       "id": 1,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260514203026/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software"
+      "archive_url": null
     },
     {
       "id": 2,
@@ -19,13 +19,13 @@
       "id": 3,
       "url": "https://www.fda.gov/about-fda/artificial-intelligence-drug-development/guiding-principles-good-ai-practice-drug-development",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260707052201/https://www.fda.gov/about-fda/artificial-intelligence-drug-development/guiding-principles-good-ai-practice-drug-development"
     },
     {
       "id": 4,
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260521213713/https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions"
     },
     {
       "id": 52,
@@ -49,7 +49,7 @@
       "id": 55,
       "url": "https://www.fda.gov/science-research/artificial-intelligence-and-medical-products/fda-digital-health-and-artificial-intelligence-glossary-educational-resource",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260430040137/https://www.fda.gov/science-research/artificial-intelligence-and-medical-products/fda-digital-health-and-artificial-intelligence-glossary-educational-resource"
     },
     {
       "id": 56,
@@ -68,7 +68,7 @@
     {
       "id": 15,
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/7757",
-      "archive_url": "http://web.archive.org/web/20260630155420/https://www.congress.gov/bill/119th-congress/house-bill/7757"
+      "archive_url": "http://web.archive.org/web/20260710034301/https://www.congress.gov/bill/119th-congress/house-bill/7757"
     }
   ]
 }
