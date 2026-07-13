@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-07-12T11:58:35.799501Z",
+  "checked_at": "2026-07-13T13:23:19.768097Z",
   "checked": 214,
   "migrated": 0,
   "broken": [
@@ -61,7 +61,7 @@
       "id": 57,
       "url": "https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-software-medical-device",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260623160640/https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-software-medical-device"
+      "archive_url": null
     }
   ],
   "blocked": [
