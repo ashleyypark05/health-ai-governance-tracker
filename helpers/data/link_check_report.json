@@ -1,7 +1,7 @@
 {
-  "checked_at": "2026-07-17T12:09:00.701315Z",
-  "checked": 227,
-  "migrated": 2,
+  "checked_at": "2026-07-18T11:52:54.464105Z",
+  "checked": 228,
+  "migrated": 1,
   "broken": [
     {
       "id": 1,
@@ -37,13 +37,13 @@
       "id": 52,
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/request-public-comment-measuring-and-evaluating-artificial-intelligence-enabled-medical-device",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260415225828/https://www.fda.gov/medical-devices/digital-health-center-excellence/request-public-comment-measuring-and-evaluating-artificial-intelligence-enabled-medical-device"
+      "archive_url": "http://web.archive.org/web/20260713225056/https://www.fda.gov/medical-devices/digital-health-center-excellence/request-public-comment-measuring-and-evaluating-artificial-intelligence-enabled-medical-device"
     },
     {
       "id": 53,
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260521083557/https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd?"
     },
     {
       "id": 54,
@@ -67,7 +67,7 @@
       "id": 57,
       "url": "https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-software-medical-device",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260623160640/https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-software-medical-device"
+      "archive_url": "http://web.archive.org/web/20260713231117/https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-software-medical-device"
     }
   ],
   "blocked": [
