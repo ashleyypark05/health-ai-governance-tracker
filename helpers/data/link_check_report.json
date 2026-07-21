@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-07-20T13:05:28.416890Z",
-  "checked": 231,
+  "checked_at": "2026-07-21T12:24:20.649402Z",
+  "checked": 232,
   "migrated": 0,
   "broken": [
     {
@@ -43,7 +43,7 @@
       "id": 53,
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260521083557/https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd?"
     },
     {
       "id": 54,
