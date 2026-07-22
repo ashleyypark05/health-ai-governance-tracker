@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-07-21T12:24:20.649402Z",
-  "checked": 232,
+  "checked_at": "2026-07-22T12:25:10.115863Z",
+  "checked": 233,
   "migrated": 0,
   "broken": [
     {
@@ -13,7 +13,7 @@
       "id": 2,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260710193224/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices"
+      "archive_url": "http://web.archive.org/web/20260722050620/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices"
     },
     {
       "id": 3,
@@ -25,7 +25,7 @@
       "id": 4,
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260521213713/https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions"
+      "archive_url": null
     },
     {
       "id": 27,
