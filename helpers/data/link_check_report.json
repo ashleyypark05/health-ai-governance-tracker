@@ -1,7 +1,7 @@
 {
-  "checked_at": "2026-07-27T13:38:42.201330Z",
-  "checked": 234,
-  "migrated": 0,
+  "checked_at": "2026-07-28T12:53:20.051253Z",
+  "checked": 236,
+  "migrated": 1,
   "broken": [
     {
       "id": 1,
@@ -19,37 +19,13 @@
       "id": 3,
       "url": "https://www.fda.gov/about-fda/artificial-intelligence-drug-development/guiding-principles-good-ai-practice-drug-development",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260707052201/https://www.fda.gov/about-fda/artificial-intelligence-drug-development/guiding-principles-good-ai-practice-drug-development"
+      "archive_url": null
     },
     {
       "id": 4,
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions",
       "status": 404,
       "archive_url": "http://web.archive.org/web/20260521213713/https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions"
-    },
-    {
-      "id": 22,
-      "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB2575",
-      "status": 503,
-      "archive_url": "http://web.archive.org/web/20260426151031/https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB2575"
-    },
-    {
-      "id": 23,
-      "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB2431",
-      "status": 503,
-      "archive_url": "http://web.archive.org/web/20260606015741/https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB2431"
-    },
-    {
-      "id": 27,
-      "url": "https://commerce.utah.gov/ai/regulatory-relief/authorized-ai-pilots/ai-legion-health/",
-      "status": 403,
-      "archive_url": "http://web.archive.org/web/20260706033415/https://commerce.utah.gov/ai/regulatory-relief/authorized-ai-pilots/ai-legion-health/"
-    },
-    {
-      "id": 31,
-      "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB243",
-      "status": 503,
-      "archive_url": "http://web.archive.org/web/20260726184451/https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB243"
     },
     {
       "id": 52,
@@ -85,7 +61,7 @@
       "id": 57,
       "url": "https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-software-medical-device",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260713231117/https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-software-medical-device"
+      "archive_url": null
     }
   ],
   "blocked": [
