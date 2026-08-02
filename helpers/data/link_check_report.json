@@ -1,7 +1,7 @@
 {
-  "checked_at": "2026-08-01T12:02:08.712290Z",
-  "checked": 248,
-  "migrated": 3,
+  "checked_at": "2026-08-02T12:01:48.940517Z",
+  "checked": 250,
+  "migrated": 2,
   "broken": [
     {
       "id": 1,
@@ -43,13 +43,13 @@
       "id": 54,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/marketing-submission-recommendations-predetermined-change-control-plan-artificial",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20241109044806/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/marketing-submission-recommendations-predetermined-change-control-plan-artificial"
     },
     {
       "id": 55,
       "url": "https://www.fda.gov/science-research/artificial-intelligence-and-medical-products/fda-digital-health-and-artificial-intelligence-glossary-educational-resource",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260430040137/https://www.fda.gov/science-research/artificial-intelligence-and-medical-products/fda-digital-health-and-artificial-intelligence-glossary-educational-resource"
+      "archive_url": null
     },
     {
       "id": 56,
