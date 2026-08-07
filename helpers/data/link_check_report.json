@@ -1,7 +1,7 @@
 {
-  "checked_at": "2026-08-06T12:55:33.560072Z",
-  "checked": 256,
-  "migrated": 1,
+  "checked_at": "2026-08-07T11:44:07.232223Z",
+  "checked": 258,
+  "migrated": 0,
   "broken": [
     {
       "id": 1,
@@ -31,7 +31,7 @@
       "id": 52,
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/request-public-comment-measuring-and-evaluating-artificial-intelligence-enabled-medical-device",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260713225056/https://www.fda.gov/medical-devices/digital-health-center-excellence/request-public-comment-measuring-and-evaluating-artificial-intelligence-enabled-medical-device"
     },
     {
       "id": 53,
