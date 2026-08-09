@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-08-08T11:27:01.437754Z",
-  "checked": 259,
+  "checked_at": "2026-08-09T11:27:09.303022Z",
+  "checked": 260,
   "migrated": 1,
   "broken": [
     {
@@ -26,6 +26,12 @@
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions",
       "status": 404,
       "archive_url": "http://web.archive.org/web/20260521213713/https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions"
+    },
+    {
+      "id": 30,
+      "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149",
+      "status": "HTTPSConnectionPool(host='capitol.texas.gov', port=443): Max retries exceeded with url: /BillLookup/History.aspx?LegSess=89R&Bill=HB149 (Caused by NewConnectionError(\"HTTPSConnection(host='capitol.texas.gov', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))",
+      "archive_url": "http://web.archive.org/web/20260805001842/https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149"
     },
     {
       "id": 52,
@@ -55,7 +61,7 @@
       "id": 56,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/artificial-intelligence-enabled-device-software-functions-lifecycle-management-and-marketing",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260714140533/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/artificial-intelligence-enabled-device-software-functions-lifecycle-management-and-marketing"
     },
     {
       "id": 57,
