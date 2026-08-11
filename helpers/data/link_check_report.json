@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-08-10T11:46:26.596561Z",
-  "checked": 260,
+  "checked_at": "2026-08-11T11:42:27.755384Z",
+  "checked": 261,
   "migrated": 0,
   "broken": [
     {
@@ -13,7 +13,7 @@
       "id": 2,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260722050620/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices"
     },
     {
       "id": 3,
@@ -26,12 +26,6 @@
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions",
       "status": 404,
       "archive_url": "http://web.archive.org/web/20260521213713/https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions"
-    },
-    {
-      "id": 30,
-      "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149",
-      "status": "HTTPSConnectionPool(host='capitol.texas.gov', port=443): Max retries exceeded with url: /BillLookup/History.aspx?LegSess=89R&Bill=HB149 (Caused by NewConnectionError(\"HTTPSConnection(host='capitol.texas.gov', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))",
-      "archive_url": "http://web.archive.org/web/20260805001842/https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149"
     },
     {
       "id": 52,
