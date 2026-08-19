@@ -1,7 +1,7 @@
 {
-  "checked_at": "2026-08-18T11:23:27.503344Z",
+  "checked_at": "2026-08-19T11:23:35.914111Z",
   "checked": 270,
-  "migrated": 1,
+  "migrated": 0,
   "broken": [
     {
       "id": 1,
@@ -28,6 +28,18 @@
       "archive_url": "http://web.archive.org/web/20260521213713/https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions"
     },
     {
+      "id": 27,
+      "url": "https://commerce.utah.gov/ai/regulatory-relief/authorized-ai-pilots/ai-legion-health/",
+      "status": 403,
+      "archive_url": "http://web.archive.org/web/20260706033415/https://commerce.utah.gov/ai/regulatory-relief/authorized-ai-pilots/ai-legion-health/"
+    },
+    {
+      "id": 30,
+      "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149",
+      "status": "HTTPSConnectionPool(host='capitol.texas.gov', port=443): Max retries exceeded with url: /BillLookup/History.aspx?LegSess=89R&Bill=HB149 (Caused by NewConnectionError(\"HTTPSConnection(host='capitol.texas.gov', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))",
+      "archive_url": "http://web.archive.org/web/20260805001842/https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149"
+    },
+    {
       "id": 52,
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/request-public-comment-measuring-and-evaluating-artificial-intelligence-enabled-medical-device",
       "status": 404,
@@ -49,7 +61,7 @@
       "id": 55,
       "url": "https://www.fda.gov/science-research/artificial-intelligence-and-medical-products/fda-digital-health-and-artificial-intelligence-glossary-educational-resource",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260430040137/https://www.fda.gov/science-research/artificial-intelligence-and-medical-products/fda-digital-health-and-artificial-intelligence-glossary-educational-resource"
     },
     {
       "id": 56,
