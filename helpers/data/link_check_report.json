@@ -1,7 +1,7 @@
 {
-  "checked_at": "2026-08-19T11:23:35.914111Z",
-  "checked": 270,
-  "migrated": 0,
+  "checked_at": "2026-08-20T11:24:39.233087Z",
+  "checked": 278,
+  "migrated": 5,
   "broken": [
     {
       "id": 1,
@@ -32,12 +32,6 @@
       "url": "https://commerce.utah.gov/ai/regulatory-relief/authorized-ai-pilots/ai-legion-health/",
       "status": 403,
       "archive_url": "http://web.archive.org/web/20260706033415/https://commerce.utah.gov/ai/regulatory-relief/authorized-ai-pilots/ai-legion-health/"
-    },
-    {
-      "id": 30,
-      "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149",
-      "status": "HTTPSConnectionPool(host='capitol.texas.gov', port=443): Max retries exceeded with url: /BillLookup/History.aspx?LegSess=89R&Bill=HB149 (Caused by NewConnectionError(\"HTTPSConnection(host='capitol.texas.gov', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))",
-      "archive_url": "http://web.archive.org/web/20260805001842/https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149"
     },
     {
       "id": 52,
