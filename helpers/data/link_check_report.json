@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-08-20T11:24:39.233087Z",
-  "checked": 278,
+  "checked_at": "2026-08-21T11:24:28.309767Z",
+  "checked": 282,
   "migrated": 5,
   "broken": [
     {
@@ -61,7 +61,7 @@
       "id": 56,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/artificial-intelligence-enabled-device-software-functions-lifecycle-management-and-marketing",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260714140533/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/artificial-intelligence-enabled-device-software-functions-lifecycle-management-and-marketing"
+      "archive_url": null
     },
     {
       "id": 57,
