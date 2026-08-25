@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-08-24T11:26:35.945914Z",
-  "checked": 287,
+  "checked_at": "2026-08-25T11:25:33.302199Z",
+  "checked": 288,
   "migrated": 0,
   "broken": [
     {
@@ -13,7 +13,7 @@
       "id": 2,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260822230956/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices"
+      "archive_url": "http://web.archive.org/web/20260823223806/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices"
     },
     {
       "id": 3,
