@@ -1,7 +1,7 @@
 {
-  "checked_at": "2026-08-26T11:28:16.677641Z",
-  "checked": 289,
-  "migrated": 0,
+  "checked_at": "2026-08-27T20:56:24.459112Z",
+  "checked": 293,
+  "migrated": 2,
   "broken": [
     {
       "id": 1,
@@ -13,7 +13,7 @@
       "id": 2,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260825104426/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices"
+      "archive_url": "http://web.archive.org/web/20260826145016/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices"
     },
     {
       "id": 3,
@@ -26,6 +26,12 @@
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions",
       "status": 404,
       "archive_url": "http://web.archive.org/web/20260521213713/https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions"
+    },
+    {
+      "id": 27,
+      "url": "https://commerce.utah.gov/ai/regulatory-relief/authorized-ai-pilots/ai-legion-health/",
+      "status": 403,
+      "archive_url": "http://web.archive.org/web/20260706033415/https://commerce.utah.gov/ai/regulatory-relief/authorized-ai-pilots/ai-legion-health/"
     },
     {
       "id": 52,
@@ -61,7 +67,7 @@
       "id": 57,
       "url": "https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-software-medical-device",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260825072245/https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-software-medical-device"
+      "archive_url": null
     }
   ],
   "blocked": [
