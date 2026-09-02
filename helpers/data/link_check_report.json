@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-09-01T15:25:15.257885Z",
-  "checked": 295,
+  "checked_at": "2026-09-02T14:59:23.069147Z",
+  "checked": 296,
   "migrated": 0,
   "broken": [
     {
@@ -19,25 +19,13 @@
       "id": 3,
       "url": "https://www.fda.gov/about-fda/artificial-intelligence-drug-development/guiding-principles-good-ai-practice-drug-development",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260824230130/https://www.fda.gov/about-fda/artificial-intelligence-drug-development/guiding-principles-good-ai-practice-drug-development"
+      "archive_url": null
     },
     {
       "id": 4,
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions",
       "status": 404,
       "archive_url": "http://web.archive.org/web/20260521213713/https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions"
-    },
-    {
-      "id": 25,
-      "url": "https://legacylis.virginia.gov/cgi-bin/legp604.exe?ses=261&typ=bil&val=SB269",
-      "status": "HTTPSConnectionPool(host='legacylis.virginia.gov', port=443): Max retries exceeded with url: /cgi-bin/legp604.exe?ses=261&typ=bil&val=SB269 (Caused by ConnectTimeoutError(<HTTPSConnection(host='legacylis.virginia.gov', port=443) at 0x7fa12df377d0>, 'Connection to legacylis.virginia.gov timed out. (connect timeout=15)'))",
-      "archive_url": null
-    },
-    {
-      "id": 27,
-      "url": "https://commerce.utah.gov/ai/regulatory-relief/authorized-ai-pilots/ai-legion-health/",
-      "status": "HTTPSConnectionPool(host='commerce.utah.gov', port=443): Read timed out. (read timeout=15)",
-      "archive_url": "http://web.archive.org/web/20260706033415/https://commerce.utah.gov/ai/regulatory-relief/authorized-ai-pilots/ai-legion-health/"
     },
     {
       "id": 52,
