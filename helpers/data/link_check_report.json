@@ -1,13 +1,13 @@
 {
-  "checked_at": "2026-09-03T14:53:15.512330Z",
-  "checked": 303,
-  "migrated": 5,
+  "checked_at": "2026-09-04T14:48:25.515975Z",
+  "checked": 311,
+  "migrated": 9,
   "broken": [
     {
       "id": 1,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260805111519/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software"
+      "archive_url": null
     },
     {
       "id": 2,
@@ -26,12 +26,6 @@
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions",
       "status": 404,
       "archive_url": "http://web.archive.org/web/20260521213713/https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions"
-    },
-    {
-      "id": 27,
-      "url": "https://commerce.utah.gov/ai/regulatory-relief/authorized-ai-pilots/ai-legion-health/",
-      "status": 403,
-      "archive_url": "http://web.archive.org/web/20260706033415/https://commerce.utah.gov/ai/regulatory-relief/authorized-ai-pilots/ai-legion-health/"
     },
     {
       "id": 52,
@@ -61,7 +55,7 @@
       "id": 56,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/artificial-intelligence-enabled-device-software-functions-lifecycle-management-and-marketing",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260714140533/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/artificial-intelligence-enabled-device-software-functions-lifecycle-management-and-marketing"
+      "archive_url": null
     },
     {
       "id": 57,
