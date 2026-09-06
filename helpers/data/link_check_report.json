@@ -1,19 +1,19 @@
 {
-  "checked_at": "2026-09-05T13:41:20.366538Z",
-  "checked": 316,
-  "migrated": 5,
+  "checked_at": "2026-09-06T13:56:33.279678Z",
+  "checked": 317,
+  "migrated": 1,
   "broken": [
     {
       "id": 1,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260805111519/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software"
+      "archive_url": "http://web.archive.org/web/20260905154725/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software"
     },
     {
       "id": 2,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260827175255/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices"
+      "archive_url": "http://web.archive.org/web/20260906054909/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices"
     },
     {
       "id": 3,
@@ -37,25 +37,25 @@
       "id": 53,
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260614004325/https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd"
+      "archive_url": "http://web.archive.org/web/20260904044927/https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd"
     },
     {
       "id": 54,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/marketing-submission-recommendations-predetermined-change-control-plan-artificial",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20241109044806/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/marketing-submission-recommendations-predetermined-change-control-plan-artificial"
     },
     {
       "id": 55,
       "url": "https://www.fda.gov/science-research/artificial-intelligence-and-medical-products/fda-digital-health-and-artificial-intelligence-glossary-educational-resource",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260825154704/https://www.fda.gov/science-research/artificial-intelligence-and-medical-products/fda-digital-health-and-artificial-intelligence-glossary-educational-resource"
+      "archive_url": "http://web.archive.org/web/20260904063017/https://www.fda.gov/science-research/artificial-intelligence-and-medical-products/fda-digital-health-and-artificial-intelligence-glossary-educational-resource"
     },
     {
       "id": 56,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/artificial-intelligence-enabled-device-software-functions-lifecycle-management-and-marketing",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260714140533/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/artificial-intelligence-enabled-device-software-functions-lifecycle-management-and-marketing"
+      "archive_url": "http://web.archive.org/web/20260906080036/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/artificial-intelligence-enabled-device-software-functions-lifecycle-management-and-marketing"
     },
     {
       "id": 57,
