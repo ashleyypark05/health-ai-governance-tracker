@@ -1,31 +1,43 @@
 {
-  "checked_at": "2026-09-07T16:18:28.951736Z",
-  "checked": 317,
-  "migrated": 0,
+  "checked_at": "2026-09-08T14:53:48.620183Z",
+  "checked": 319,
+  "migrated": 1,
   "broken": [
     {
       "id": 1,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260905154725/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software"
+      "archive_url": "http://web.archive.org/web/20260805111519/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software"
     },
     {
       "id": 2,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260907045505/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices"
+      "archive_url": "http://web.archive.org/web/20260908070659/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices"
     },
     {
       "id": 3,
       "url": "https://www.fda.gov/about-fda/artificial-intelligence-drug-development/guiding-principles-good-ai-practice-drug-development",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260824230130/https://www.fda.gov/about-fda/artificial-intelligence-drug-development/guiding-principles-good-ai-practice-drug-development"
+      "archive_url": null
     },
     {
       "id": 4,
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions",
       "status": 404,
       "archive_url": "http://web.archive.org/web/20260521213713/https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions"
+    },
+    {
+      "id": 26,
+      "url": "https://www.ilga.gov/Legislation/BillStatus?DocNum=3590&GAID=18&GA=104&DocTypeID=SB",
+      "status": "HTTPSConnectionPool(host='www.ilga.gov', port=443): Max retries exceeded with url: /Legislation/BillStatus?DocNum=3590&GAID=18&GA=104&DocTypeID=SB (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1016)')))",
+      "archive_url": null
+    },
+    {
+      "id": 29,
+      "url": "https://www.ilga.gov/Legislation/BillStatus?DocNum=1806&GAID=17&GA=103&DocTypeID=HB",
+      "status": "HTTPSConnectionPool(host='www.ilga.gov', port=443): Max retries exceeded with url: /Legislation/BillStatus?DocNum=1806&GAID=17&GA=103&DocTypeID=HB (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1016)')))",
+      "archive_url": null
     },
     {
       "id": 52,
@@ -37,7 +49,7 @@
       "id": 53,
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260904044927/https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd"
     },
     {
       "id": 54,
