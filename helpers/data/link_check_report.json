@@ -1,19 +1,19 @@
 {
-  "checked_at": "2026-09-10T14:50:08.472571Z",
-  "checked": 327,
+  "checked_at": "2026-09-11T14:52:31.105295Z",
+  "checked": 329,
   "migrated": 0,
   "broken": [
     {
       "id": 1,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260908190753/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software"
+      "archive_url": null
     },
     {
       "id": 2,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260910040933/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices"
+      "archive_url": null
     },
     {
       "id": 3,
@@ -38,12 +38,6 @@
       "url": "https://www.ilga.gov/Legislation/BillStatus?DocNum=1806&GAID=17&GA=103&DocTypeID=HB",
       "status": "HTTPSConnectionPool(host='www.ilga.gov', port=443): Max retries exceeded with url: /Legislation/BillStatus?DocNum=1806&GAID=17&GA=103&DocTypeID=HB (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1016)')))",
       "archive_url": null
-    },
-    {
-      "id": 30,
-      "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149",
-      "status": "HTTPSConnectionPool(host='capitol.texas.gov', port=443): Max retries exceeded with url: /BillLookup/History.aspx?LegSess=89R&Bill=HB149 (Caused by NewConnectionError(\"HTTPSConnection(host='capitol.texas.gov', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))",
-      "archive_url": "http://web.archive.org/web/20260901094508/https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149"
     },
     {
       "id": 52,
