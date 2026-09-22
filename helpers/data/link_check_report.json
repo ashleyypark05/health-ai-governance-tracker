@@ -1,13 +1,13 @@
 {
-  "checked_at": "2026-09-21T16:49:18.863019Z",
-  "checked": 341,
-  "migrated": 3,
+  "checked_at": "2026-09-22T15:27:20.499839Z",
+  "checked": 344,
+  "migrated": 2,
   "broken": [
     {
       "id": 1,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260908190753/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software"
+      "archive_url": null
     },
     {
       "id": 2,
@@ -19,19 +19,19 @@
       "id": 3,
       "url": "https://www.fda.gov/about-fda/artificial-intelligence-drug-development/guiding-principles-good-ai-practice-drug-development",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260824230130/https://www.fda.gov/about-fda/artificial-intelligence-drug-development/guiding-principles-good-ai-practice-drug-development"
+      "archive_url": null
     },
     {
       "id": 4,
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260521213713/https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions"
+      "archive_url": null
     },
     {
       "id": 21,
       "url": "https://leg.colorado.gov/bills/sb25-205",
       "status": 406,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260623185346/https://leg.colorado.gov/bills/sb25-205"
     },
     {
       "id": 26,
@@ -55,7 +55,7 @@
       "id": 53,
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260904044927/https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd"
     },
     {
       "id": 54,
