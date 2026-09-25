@@ -1,19 +1,19 @@
 {
-  "checked_at": "2026-09-24T15:44:13.285230Z",
-  "checked": 349,
+  "checked_at": "2026-09-25T15:45:22.094135Z",
+  "checked": 350,
   "migrated": 1,
   "broken": [
     {
       "id": 1,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260908190753/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software"
     },
     {
       "id": 2,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260921021439/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices"
+      "archive_url": null
     },
     {
       "id": 3,
@@ -25,7 +25,13 @@
       "id": 4,
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260521213713/https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions"
+    },
+    {
+      "id": 20,
+      "url": "https://olis.oregonlegislature.gov/liz/2026R1/Measures/Overview/SB1546",
+      "status": 500,
+      "archive_url": "http://web.archive.org/web/20260910023551/https://olis.oregonlegislature.gov/liz/2026R1/Measures/Overview/sb1546"
     },
     {
       "id": 21,
@@ -55,13 +61,13 @@
       "id": 53,
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260904044927/https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd"
     },
     {
       "id": 54,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/marketing-submission-recommendations-predetermined-change-control-plan-artificial",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20241109044806/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/marketing-submission-recommendations-predetermined-change-control-plan-artificial"
     },
     {
       "id": 55,
@@ -86,7 +92,7 @@
     {
       "id": 15,
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/7757",
-      "archive_url": "http://web.archive.org/web/20260715194739/https://www.congress.gov/bill/119th-congress/house-bill/7757"
+      "archive_url": null
     }
   ]
 }
