@@ -1,19 +1,19 @@
 {
-  "checked_at": "2026-10-03T15:06:08.157313Z",
-  "checked": 365,
+  "checked_at": "2026-10-04T15:41:30.305835Z",
+  "checked": 367,
   "migrated": 2,
   "broken": [
     {
       "id": 1,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20261001101431/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software"
     },
     {
       "id": 2,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20261004000827/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices"
     },
     {
       "id": 3,
@@ -37,12 +37,6 @@
       "id": 21,
       "url": "https://leg.colorado.gov/bills/sb25-205",
       "status": 406,
-      "archive_url": "http://web.archive.org/web/20260623185346/https://leg.colorado.gov/bills/sb25-205"
-    },
-    {
-      "id": 24,
-      "url": "https://nyassembly.gov/leg/?bn=AB8884",
-      "status": "HTTPSConnectionPool(host='nyassembly.gov', port=443): Max retries exceeded with url: /leg/?bn=AB8884 (Caused by ConnectTimeoutError(<HTTPSConnection(host='nyassembly.gov', port=443) at 0x7fbf106fe1d0>, 'Connection to nyassembly.gov timed out. (connect timeout=15)'))",
       "archive_url": null
     },
     {
@@ -58,28 +52,22 @@
       "archive_url": null
     },
     {
-      "id": 31,
-      "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB243",
-      "status": "HTTPSConnectionPool(host='leginfo.legislature.ca.gov', port=443): Read timed out. (read timeout=15)",
-      "archive_url": "http://web.archive.org/web/20260929205344/https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB243"
-    },
-    {
       "id": 52,
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/request-public-comment-measuring-and-evaluating-artificial-intelligence-enabled-medical-device",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260829144127/https://www.fda.gov/medical-devices/digital-health-center-excellence/request-public-comment-measuring-and-evaluating-artificial-intelligence-enabled-medical-device"
     },
     {
       "id": 53,
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260929014924/https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd"
     },
     {
       "id": 54,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/marketing-submission-recommendations-predetermined-change-control-plan-artificial",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20241109044806/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/marketing-submission-recommendations-predetermined-change-control-plan-artificial"
     },
     {
       "id": 55,
@@ -91,13 +79,13 @@
       "id": 56,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/artificial-intelligence-enabled-device-software-functions-lifecycle-management-and-marketing",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260930154025/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/artificial-intelligence-enabled-device-software-functions-lifecycle-management-and-marketing"
     },
     {
       "id": 57,
       "url": "https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-software-medical-device",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260922085815/https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-software-medical-device"
     }
   ],
   "blocked": [
