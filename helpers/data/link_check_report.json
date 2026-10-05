@@ -1,7 +1,7 @@
 {
-  "checked_at": "2026-10-04T15:41:30.305835Z",
-  "checked": 367,
-  "migrated": 2,
+  "checked_at": "2026-10-05T19:32:51.279798Z",
+  "checked": 370,
+  "migrated": 1,
   "broken": [
     {
       "id": 1,
@@ -13,7 +13,7 @@
       "id": 2,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20261004000827/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices"
+      "archive_url": "http://web.archive.org/web/20261004170200/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices"
     },
     {
       "id": 3,
@@ -37,7 +37,7 @@
       "id": 21,
       "url": "https://leg.colorado.gov/bills/sb25-205",
       "status": 406,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260623185346/https://leg.colorado.gov/bills/sb25-205"
     },
     {
       "id": 26,
@@ -55,7 +55,7 @@
       "id": 52,
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/request-public-comment-measuring-and-evaluating-artificial-intelligence-enabled-medical-device",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260829144127/https://www.fda.gov/medical-devices/digital-health-center-excellence/request-public-comment-measuring-and-evaluating-artificial-intelligence-enabled-medical-device"
+      "archive_url": null
     },
     {
       "id": 53,
@@ -73,7 +73,7 @@
       "id": 55,
       "url": "https://www.fda.gov/science-research/artificial-intelligence-and-medical-products/fda-digital-health-and-artificial-intelligence-glossary-educational-resource",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260923003453/https://www.fda.gov/science-research/artificial-intelligence-and-medical-products/fda-digital-health-and-artificial-intelligence-glossary-educational-resource"
     },
     {
       "id": 56,
