@@ -1,7 +1,7 @@
 {
-  "checked_at": "2026-10-06T17:04:59.052470Z",
-  "checked": 373,
-  "migrated": 0,
+  "checked_at": "2026-10-07T17:43:22.002358Z",
+  "checked": 376,
+  "migrated": 2,
   "broken": [
     {
       "id": 1,
@@ -19,7 +19,7 @@
       "id": 3,
       "url": "https://www.fda.gov/about-fda/artificial-intelligence-drug-development/guiding-principles-good-ai-practice-drug-development",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260824230130/https://www.fda.gov/about-fda/artificial-intelligence-drug-development/guiding-principles-good-ai-practice-drug-development"
+      "archive_url": null
     },
     {
       "id": 4,
@@ -34,22 +34,28 @@
       "archive_url": "http://web.archive.org/web/20261001163244/https://le.utah.gov/~2026/bills/static/SB0319.html"
     },
     {
+      "id": 20,
+      "url": "https://olis.oregonlegislature.gov/liz/2026R1/Measures/Overview/SB1546",
+      "status": "HTTPSConnectionPool(host='olis.oregonlegislature.gov', port=443): Read timed out. (read timeout=15)",
+      "archive_url": "http://web.archive.org/web/20261003091010/https://olis.oregonlegislature.gov/liz/2026R1/Measures/Overview/SB1546"
+    },
+    {
       "id": 21,
       "url": "https://leg.colorado.gov/bills/sb25-205",
       "status": 406,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260623185346/https://leg.colorado.gov/bills/sb25-205"
     },
     {
       "id": 22,
       "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB2575",
       "status": 403,
-      "archive_url": "http://web.archive.org/web/20261004133806/https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB2575"
+      "archive_url": null
     },
     {
       "id": 23,
       "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB2431",
       "status": 403,
-      "archive_url": "http://web.archive.org/web/20260606015741/https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB2431"
+      "archive_url": null
     },
     {
       "id": 26,
@@ -67,13 +73,13 @@
       "id": 31,
       "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB243",
       "status": 403,
-      "archive_url": "http://web.archive.org/web/20261004054120/https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB243"
+      "archive_url": null
     },
     {
       "id": 52,
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/request-public-comment-measuring-and-evaluating-artificial-intelligence-enabled-medical-device",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260829144127/https://www.fda.gov/medical-devices/digital-health-center-excellence/request-public-comment-measuring-and-evaluating-artificial-intelligence-enabled-medical-device"
+      "archive_url": null
     },
     {
       "id": 53,
@@ -97,7 +103,7 @@
       "id": 56,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/artificial-intelligence-enabled-device-software-functions-lifecycle-management-and-marketing",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20261005144815/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/artificial-intelligence-enabled-device-software-functions-lifecycle-management-and-marketing"
     },
     {
       "id": 57,
@@ -110,7 +116,7 @@
     {
       "id": 15,
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/7757",
-      "archive_url": "http://web.archive.org/web/20260715194739/https://www.congress.gov/bill/119th-congress/house-bill/7757"
+      "archive_url": null
     }
   ]
 }
