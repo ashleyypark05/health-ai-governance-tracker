@@ -1,25 +1,25 @@
 {
-  "checked_at": "2026-10-07T17:43:22.002358Z",
-  "checked": 376,
+  "checked_at": "2026-10-08T17:44:36.768219Z",
+  "checked": 380,
   "migrated": 2,
   "broken": [
     {
       "id": 1,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20261001101431/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software"
+      "archive_url": null
     },
     {
       "id": 2,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20261004170200/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices"
+      "archive_url": "http://web.archive.org/web/20261005212457/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices"
     },
     {
       "id": 3,
       "url": "https://www.fda.gov/about-fda/artificial-intelligence-drug-development/guiding-principles-good-ai-practice-drug-development",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260824230130/https://www.fda.gov/about-fda/artificial-intelligence-drug-development/guiding-principles-good-ai-practice-drug-development"
     },
     {
       "id": 4,
@@ -34,12 +34,6 @@
       "archive_url": "http://web.archive.org/web/20261001163244/https://le.utah.gov/~2026/bills/static/SB0319.html"
     },
     {
-      "id": 20,
-      "url": "https://olis.oregonlegislature.gov/liz/2026R1/Measures/Overview/SB1546",
-      "status": "HTTPSConnectionPool(host='olis.oregonlegislature.gov', port=443): Read timed out. (read timeout=15)",
-      "archive_url": "http://web.archive.org/web/20261003091010/https://olis.oregonlegislature.gov/liz/2026R1/Measures/Overview/SB1546"
-    },
-    {
       "id": 21,
       "url": "https://leg.colorado.gov/bills/sb25-205",
       "status": 406,
@@ -49,13 +43,13 @@
       "id": 22,
       "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB2575",
       "status": 403,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20261004133806/https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB2575"
     },
     {
       "id": 23,
       "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB2431",
       "status": 403,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260606015741/https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB2431"
     },
     {
       "id": 26,
@@ -67,6 +61,12 @@
       "id": 29,
       "url": "https://www.ilga.gov/Legislation/BillStatus?DocNum=1806&GAID=17&GA=103&DocTypeID=HB",
       "status": "HTTPSConnectionPool(host='www.ilga.gov', port=443): Max retries exceeded with url: /Legislation/BillStatus?DocNum=1806&GAID=17&GA=103&DocTypeID=HB (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1016)')))",
+      "archive_url": null
+    },
+    {
+      "id": 30,
+      "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149",
+      "status": "HTTPSConnectionPool(host='capitol.texas.gov', port=443): Max retries exceeded with url: /BillLookup/History.aspx?LegSess=89R&Bill=HB149 (Caused by NewConnectionError(\"HTTPSConnection(host='capitol.texas.gov', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))",
       "archive_url": null
     },
     {
@@ -85,7 +85,7 @@
       "id": 53,
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260929014924/https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd"
+      "archive_url": null
     },
     {
       "id": 54,
