@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-09T17:19:56.495877Z",
+  "checked_at": "2026-10-10T16:08:18.942836Z",
   "checked": 381,
   "migrated": 0,
   "broken": [
@@ -7,7 +7,7 @@
       "id": 1,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20261001101431/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software"
     },
     {
       "id": 2,
@@ -25,7 +25,7 @@
       "id": 4,
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260521213713/https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions"
     },
     {
       "id": 17,
@@ -37,25 +37,19 @@
       "id": 21,
       "url": "https://leg.colorado.gov/bills/sb25-205",
       "status": 406,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260623185346/https://leg.colorado.gov/bills/sb25-205"
     },
     {
       "id": 22,
       "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB2575",
       "status": 403,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20261004133806/https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB2575"
     },
     {
       "id": 23,
       "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB2431",
       "status": 403,
-      "archive_url": null
-    },
-    {
-      "id": 25,
-      "url": "https://legacylis.virginia.gov/cgi-bin/legp604.exe?ses=261&typ=bil&val=SB269",
-      "status": "HTTPSConnectionPool(host='legacylis.virginia.gov', port=443): Read timed out. (read timeout=15)",
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260606015741/https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB2431"
     },
     {
       "id": 26,
@@ -73,19 +67,19 @@
       "id": 31,
       "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB243",
       "status": 403,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20261004054120/https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB243"
     },
     {
       "id": 52,
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/request-public-comment-measuring-and-evaluating-artificial-intelligence-enabled-medical-device",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260829144127/https://www.fda.gov/medical-devices/digital-health-center-excellence/request-public-comment-measuring-and-evaluating-artificial-intelligence-enabled-medical-device"
     },
     {
       "id": 53,
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260929014924/https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd"
     },
     {
       "id": 54,
@@ -97,13 +91,13 @@
       "id": 55,
       "url": "https://www.fda.gov/science-research/artificial-intelligence-and-medical-products/fda-digital-health-and-artificial-intelligence-glossary-educational-resource",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260923003453/https://www.fda.gov/science-research/artificial-intelligence-and-medical-products/fda-digital-health-and-artificial-intelligence-glossary-educational-resource"
     },
     {
       "id": 56,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/artificial-intelligence-enabled-device-software-functions-lifecycle-management-and-marketing",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20261005144815/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/artificial-intelligence-enabled-device-software-functions-lifecycle-management-and-marketing"
     },
     {
       "id": 57,
