@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-10-11T16:35:52.898853Z",
-  "checked": 382,
+  "checked_at": "2026-10-12T20:08:21.718502Z",
+  "checked": 383,
   "migrated": 1,
   "broken": [
     {
@@ -13,13 +13,13 @@
       "id": 2,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20261010135448/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices"
+      "archive_url": null
     },
     {
       "id": 3,
       "url": "https://www.fda.gov/about-fda/artificial-intelligence-drug-development/guiding-principles-good-ai-practice-drug-development",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260824230130/https://www.fda.gov/about-fda/artificial-intelligence-drug-development/guiding-principles-good-ai-practice-drug-development"
     },
     {
       "id": 4,
@@ -31,25 +31,19 @@
       "id": 17,
       "url": "https://le.utah.gov/~2026/bills/static/SB0319.html",
       "status": "HTTPSConnectionPool(host='le.utah.gov', port=443): Max retries exceeded with url: /~2026/bills/static/SB0319.html (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1016)')))",
-      "archive_url": null
-    },
-    {
-      "id": 20,
-      "url": "https://olis.oregonlegislature.gov/liz/2026R1/Measures/Overview/SB1546",
-      "status": "HTTPSConnectionPool(host='olis.oregonlegislature.gov', port=443): Max retries exceeded with url: /liz/2026R1/Measures/Overview/SB1546 (Caused by NameResolutionError(\"HTTPSConnection(host='olis.oregonlegislature.gov', port=443): Failed to resolve 'olis.oregonlegislature.gov' ([Errno -5] No address associated with hostname)\"))",
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20261008160144/https://le.utah.gov/~2026/bills/static/SB0319.html"
     },
     {
       "id": 21,
       "url": "https://leg.colorado.gov/bills/sb25-205",
       "status": 406,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260623185346/https://leg.colorado.gov/bills/sb25-205"
     },
     {
       "id": 22,
       "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB2575",
       "status": 403,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20261004133806/https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB2575"
     },
     {
       "id": 23,
@@ -73,7 +67,7 @@
       "id": 31,
       "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB243",
       "status": 403,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20261004054120/https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB243"
     },
     {
       "id": 52,
@@ -91,13 +85,13 @@
       "id": 54,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/marketing-submission-recommendations-predetermined-change-control-plan-artificial",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20241109044806/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/marketing-submission-recommendations-predetermined-change-control-plan-artificial"
     },
     {
       "id": 55,
       "url": "https://www.fda.gov/science-research/artificial-intelligence-and-medical-products/fda-digital-health-and-artificial-intelligence-glossary-educational-resource",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20260923003453/https://www.fda.gov/science-research/artificial-intelligence-and-medical-products/fda-digital-health-and-artificial-intelligence-glossary-educational-resource"
     },
     {
       "id": 56,
