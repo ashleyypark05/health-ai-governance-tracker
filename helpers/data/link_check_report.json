@@ -1,37 +1,31 @@
 {
-  "checked_at": "2026-10-12T20:08:21.718502Z",
-  "checked": 383,
+  "checked_at": "2026-10-13T17:58:19.736412Z",
+  "checked": 384,
   "migrated": 1,
   "broken": [
     {
       "id": 1,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20261001101431/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software"
+      "archive_url": "http://web.archive.org/web/20261011231051/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software"
     },
     {
       "id": 2,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20261012075244/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices"
     },
     {
       "id": 3,
       "url": "https://www.fda.gov/about-fda/artificial-intelligence-drug-development/guiding-principles-good-ai-practice-drug-development",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260824230130/https://www.fda.gov/about-fda/artificial-intelligence-drug-development/guiding-principles-good-ai-practice-drug-development"
+      "archive_url": null
     },
     {
       "id": 4,
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions",
       "status": 404,
       "archive_url": "http://web.archive.org/web/20260521213713/https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions"
-    },
-    {
-      "id": 17,
-      "url": "https://le.utah.gov/~2026/bills/static/SB0319.html",
-      "status": "HTTPSConnectionPool(host='le.utah.gov', port=443): Max retries exceeded with url: /~2026/bills/static/SB0319.html (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1016)')))",
-      "archive_url": "http://web.archive.org/web/20261008160144/https://le.utah.gov/~2026/bills/static/SB0319.html"
     },
     {
       "id": 21,
@@ -49,7 +43,7 @@
       "id": 23,
       "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB2431",
       "status": 403,
-      "archive_url": "http://web.archive.org/web/20260606015741/https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB2431"
+      "archive_url": null
     },
     {
       "id": 26,
@@ -73,7 +67,7 @@
       "id": 52,
       "url": "https://www.fda.gov/medical-devices/digital-health-center-excellence/request-public-comment-measuring-and-evaluating-artificial-intelligence-enabled-medical-device",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260829144127/https://www.fda.gov/medical-devices/digital-health-center-excellence/request-public-comment-measuring-and-evaluating-artificial-intelligence-enabled-medical-device"
+      "archive_url": null
     },
     {
       "id": 53,
@@ -91,13 +85,13 @@
       "id": 55,
       "url": "https://www.fda.gov/science-research/artificial-intelligence-and-medical-products/fda-digital-health-and-artificial-intelligence-glossary-educational-resource",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20260923003453/https://www.fda.gov/science-research/artificial-intelligence-and-medical-products/fda-digital-health-and-artificial-intelligence-glossary-educational-resource"
+      "archive_url": "http://web.archive.org/web/20261011143224/https://www.fda.gov/science-research/artificial-intelligence-and-medical-products/fda-digital-health-and-artificial-intelligence-glossary-educational-resource"
     },
     {
       "id": 56,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/artificial-intelligence-enabled-device-software-functions-lifecycle-management-and-marketing",
       "status": 404,
-      "archive_url": "http://web.archive.org/web/20261005144815/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/artificial-intelligence-enabled-device-software-functions-lifecycle-management-and-marketing"
+      "archive_url": null
     },
     {
       "id": 57,
