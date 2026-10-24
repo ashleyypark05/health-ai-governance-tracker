@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-10-23T15:40:19.008972Z",
-  "checked": 404,
+  "checked_at": "2026-10-24T14:16:14.822355Z",
+  "checked": 405,
   "migrated": 1,
   "broken": [
     {
@@ -13,7 +13,7 @@
       "id": 2,
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices",
       "status": 404,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20261019051605/https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices"
     },
     {
       "id": 3,
@@ -61,7 +61,7 @@
       "id": 31,
       "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB243",
       "status": 403,
-      "archive_url": null
+      "archive_url": "http://web.archive.org/web/20261004054120/https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB243"
     },
     {
       "id": 52,
@@ -98,12 +98,6 @@
       "url": "https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-software-medical-device",
       "status": 404,
       "archive_url": "http://web.archive.org/web/20260922085815/https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-software-medical-device"
-    },
-    {
-      "id": 76,
-      "url": "https://www.nist.gov/news-events/news/2025/12/caisi-evaluation-kimi-k2-thinking",
-      "status": "HTTPSConnectionPool(host='www.nist.gov', port=443): Read timed out. (read timeout=15)",
-      "archive_url": "http://web.archive.org/web/20261008232104/https://www.nist.gov/news-events/news/2025/12/caisi-evaluation-kimi-k2-thinking"
     }
   ],
   "blocked": [
