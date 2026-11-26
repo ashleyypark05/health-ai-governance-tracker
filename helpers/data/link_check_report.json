@@ -1,7 +1,7 @@
 {
-  "checked_at": "2026-11-25T20:23:41.133851Z",
+  "checked_at": "2026-11-26T20:01:20.894634Z",
   "checked": 465,
-  "migrated": 4,
+  "migrated": 0,
   "broken": [
     {
       "id": 1,
@@ -98,6 +98,36 @@
       "url": "https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-software-medical-device",
       "status": 404,
       "archive_url": "http://web.archive.org/web/20260922085815/https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-software-medical-device"
+    },
+    {
+      "id": 422,
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQbGRmV3VMS3hVNEtDaUNJZUt1SUJCMlNHbEdHdjdJYmk0M2tleW5KVkQzVVZFMmlHeVktODdrS0NfTHBwNjhXNGVLYUNmanpZUElWYjhaUVFQd2FUUFhPQ3N3aHZXTUJzd2VZbUhaWjVXZkY3ejRCOGY5X2d2SDd6R29IVU5neW9UX1JJUjBlMTRhQ01Hb0dyMEp5MXpmS0VkdmVaam1ocnpBQk9zM1E?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "status": 429,
+      "archive_url": null
+    },
+    {
+      "id": 426,
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOcWVhclJDU0NDUFJZQ1huVUFwUHI2MC0yN2c4LUlJVkRfZE5hSmp6T2V4WFJ0TXJjZXZFUFNQZHp5b09WTElfc2Jmd2dMc3hUSTN2bm14c0pIenZfRGFNY3VLX0d2SVpreXdCWE5WZkRJVlktdExYQ2lJZER2QlMtMjVTSXVyTGp6UnFMWlBGbUgzcFhyMlRqWXR6cTgySi1xTVQ4Q25saWl1TVlFMGtkSWdkYk5SemQ5dlA0cUhJMEI1eFV5bXc?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "status": 429,
+      "archive_url": null
+    },
+    {
+      "id": 427,
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPZF9CRmxWOTYwZ2Y4b2F2VkhTcWFmRjd2ay14YUNxYVhTNG5aMmx5YzRfMHZVejlDSkpFaFVzalhSby1TRk9nYlFmeE5pa3l4bTZmS1RtRW51a1JxVzNMY09fekpoRkZveGgteEh0VEJLUG9KdXJWZDRjb0o5cXVNTmN5eVUycVJ3bGdhV0FKTUtPY09XZkVjTUhKZXR4SV9NQ0ZFd0dkQjN1OTgzYlcxY3NwVGRCUTJ5akt4Y1RLQQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "status": 429,
+      "archive_url": null
+    },
+    {
+      "id": 431,
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQU3FNVFQ3YzV1Y3lLT2Ixc3hQNHU3UDBacEVZbTlzUnlkZHR3Nk1XQUg1ejQ3aXhXY282LUdZRzFFa3dGYS11SmJMcm90ZXMtRklrRXdPcjQzTFo2Z2lMZlZvX2ZxVWxTU2JqaWZZLWlGak90Uy1vclZ3NjloeEY4aEx6bzRCa2JKTXc?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "status": 429,
+      "archive_url": null
+    },
+    {
+      "id": 450,
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQNnZZYnh0MlVMelpWamMyc2pIUHZrTmpvbk1vZnNJaVNzYU15Uld1UktsVzhYckdVMGhlN2tzYThLekJUc3BDUmN4MFRIVkRCNW9zd216NmlTMkJDQk9CNFgxTUZIUEJrZGs4U3BuQ1pYVExwclBKbFE5Wl9XcnRSTUU1UWNoRDBPblZYVWpfZ1BPWmJhQ3lmRmswTzhYb2dxUldV?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "status": 429,
+      "archive_url": null
     }
   ],
   "blocked": [
